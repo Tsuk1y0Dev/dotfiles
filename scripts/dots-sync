@@ -1,5 +1,6 @@
 #!/bin/bash
 cd ~/.config || exit
+cp -r ~/Rice/Profiles ~/.config/rice_collection
 
 if git status | grep -E "Bitwarden|YandexMusic|chromium|mozilla" >/dev/null; then
   echo "Error: Private data detected."

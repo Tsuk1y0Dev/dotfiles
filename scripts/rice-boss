@@ -1,0 +1,49 @@
+#!/bin/bash
+PROFILES_DIR="$HOME/Rice/Profiles"
+APPS=("hypr" "waybar" "rofi" "dunst" "kitty" "quickshell")
+
+case $1 in
+"switch")
+  PROFILE=$(ls "$PROFILES_DIR" | fzf --height 40% --header "Select Rice")
+  [ -z "$PROFILE" ] && exit 0
+  SELECTED="$PROFILES_DIR/$PROFILE"
+
+  # 1. Тотальная зачистка перед переключением
+  pkill -9 quickshell
+  pkill -9 waybar
+  pkill -9 dunst
+  pkill -9 rofi
+  pkill -9 qs
+  pkill -9 swww
+
+  # 2. Пересоздаем ссылки на приложения
+  for APP in "${APPS[@]}"; do
+    rm -rf "$HOME/.config/$APP"
+    if [ -d "$SELECTED/$APP" ]; then
+      ln -s "$SELECTED/$APP" "$HOME/.config/$APP"
+      echo "Linked $APP"
+    fi
+  done
+
+  # 3. Перезапуск Hyprland
+  hyprctl reload
+
+  # 4. Умный запуск интерфейса
+  if [ -d "$HOME/.config/quickshell" ]; then
+    echo "Starting Quickshell (Illogical Impulse)..."
+    quickshell --path "$HOME/.config/quickshell/ii/shell.qml" >/dev/null 2>&1 &
+  elif [ -d "$HOME/.config/waybar" ]; then
+    echo "Starting Waybar (Generic Rice)..."
+    waybar >/dev/null 2>&1 &
+  fi
+  ;;
+
+"save")
+  [ -z "$2" ] && exit 1
+  DEST="$PROFILES_DIR/$2"
+  mkdir -p "$DEST"
+  for APP in "${APPS[@]}"; do
+    [ -d "$HOME/.config/$APP" ] && cp -rL "$HOME/.config/$APP" "$DEST/"
+  done
+  ;;
+esac

@@ -29,6 +29,15 @@ export LC_CTYPE=ru_RU.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # ===== АЛИАСЫ (СОКРАЩЕНИЯ) =====
+# Rice Management
+alias rs='rice-boss switch'    # Выбрать райс из списка (fzf)
+alias r-save='rice-boss save'  # Сохранить текущий сет в новый профиль
+alias r-list='rice-boss list'  # Список всех райсов
+
+# Rice Management
+alias rs='rice-boss switch'    # Выбрать райс из списка (fzf)
+alias r-save='rice-boss save'  # Сохранить текущий сет в новый профиль
+alias r-list='rice-boss list'  # Список всех райсов
 # Работа со скриптами и конфигами
 alias dots='~/bin/dots-sync'     # Бэкап дотов
 alias strace='~/bin/sys-trace'   # Чек ошибок системы
@@ -176,6 +185,7 @@ ex () {
     echo "'$1' is not a valid file"
   fi
 }
+export PATH="$HOME/bin:$PATH"
 # ===== ПРИВЕТСТВИЕ ====
 
 # ===== СИНТАКСИЧЕСКАЯ ПРОВЕРКА =====
