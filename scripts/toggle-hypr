@@ -1,11 +1,29 @@
 #!/bin/bash
-if pgrep -x "waybar" > /dev/null; then
-    pkill waybar
-    hyprctl keyword animations:enabled 0
-    echo "Performance mode: ON"
-else
-    waybar &
-    hyprctl keyword animations:enabled 1
-    echo "Performance mode: OFF"
-fi
 
+# Проверяем состояние через Hyprland
+STATE=$(hyprctl getoption animations:enabled | awk 'NR==1 {print $2}')
+
+if [ "$STATE" = "1" ]; then
+  # ВКЛЮЧАЕМ PERFORMANCE (Убираем всё тяжелое)
+  hyprctl keyword animations:enabled 0
+  hyprctl keyword decoration:blur:enabled 0
+  hyprctl keyword decoration:drop_shadow 0
+
+  # Вместо убийства панели — просто сообщаем в лог (или оставь pkill, если хочешь пустой экран)
+  # pkill quickshell
+
+  echo "Performance mode: [ON] (Anims/Blur OFF)"
+else
+  # ВЫКЛЮЧАЕМ PERFORMANCE (Возвращаем красоту)
+  hyprctl keyword animations:enabled 1
+  hyprctl keyword decoration:blur:enabled 1
+  hyprctl keyword decoration:drop_shadow 1
+
+  # Если панель всё-таки упала или была убита — перезапускаем через родной алиас
+  if ! pgrep -x "quickshell" >/dev/null; then
+    # Используем родной запуск сборки
+    zsh -c "source ~/.zshrc && qs -c \$qsConfig &" >/dev/null 2>&1
+  fi
+
+  echo "Performance mode: [OFF] (Anims/Blur ON)"
+fi
