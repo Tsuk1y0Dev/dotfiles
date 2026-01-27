@@ -1,0 +1,290 @@
+[2026-01-02 02:04:50.673] [info]  🆙 Upscayl version: 2.15.0 FOSS
+[2026-01-02 02:04:50.676] [info]  🚀 UPSCAYL EXEC PATH:  /usr/share/upscayl/bin/upscayl-bin
+[2026-01-02 02:04:50.676] [info]  🚀 MODELS PATH:  /usr/share/upscayl/models
+[2026-01-02 02:04:50.677] [info]  🚃 App Path:  /usr/share/upscayl/app.asar
+[2026-01-02 02:04:51.044] [info]  💻 System Info: {"platform":"linux","release":"6.18.2-arch2-1","arch":"x64","model":"AMD Ryzen 7 5700U with Radeon Graphics","cpuCount":16,"gpu":{"active":true,"deviceId":5708,"gpuPreference":0,"vendorId":4098}}
+[2026-01-02 03:09:59.048] [info]  🆙 Upscayl version: 2.15.0 FOSS
+[2026-01-02 03:09:59.051] [info]  🚀 UPSCAYL EXEC PATH:  /usr/share/upscayl/bin/upscayl-bin
+[2026-01-02 03:09:59.052] [info]  🚀 MODELS PATH:  /usr/share/upscayl/models
+[2026-01-02 03:09:59.053] [info]  🚃 App Path:  /usr/share/upscayl/app.asar
+[2026-01-02 03:09:59.452] [info]  💻 System Info: {"platform":"linux","release":"6.18.2-arch2-1","arch":"x64","model":"AMD Ryzen 7 5700U with Radeon Graphics","cpuCount":16,"gpu":{"active":true,"deviceId":5708,"gpuPreference":0,"vendorId":4098}}
+[2026-01-02 03:10:01.721] [info]  🔄 Resetting image paths
+[2026-01-02 03:10:10.453] [info]  🖼️ Updating Image Path:  /home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg
+[2026-01-02 03:10:10.454] [info]  📄 Selected File Path:  /home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg
+[2026-01-02 03:10:10.455] [info]  🎒 BACKEND REPORTED:  🖼️ Updating Image Path:  /home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg
+[2026-01-02 03:10:10.457] [info]  🖼 Selected Image Path:  /home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg
+[2026-01-02 03:10:10.458] [info]  📁 Selected Image Directory:  /home/tsuk1y0/Wallpapers
+[2026-01-02 03:10:10.459] [info]  🖼 imagePath:  /home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg
+[2026-01-02 03:10:10.460] [info]  🔤 Extension:  jpg
+[2026-01-02 03:10:10.467] [info]  🎒 BACKEND REPORTED:  📄 Selected File Path:  /home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg
+[2026-01-02 03:10:19.354] [info]  🔄 Resetting Upscaled Image Path
+[2026-01-02 03:10:19.356] [info]  ✅ Upscayl Variables:  {"model":"upscayl-standard-4x","gpuId":null,"saveImageAs":"png","inputDir":"/home/tsuk1y0/Wallpapers","fileNameWithExt":"7cee10cd6f2202c192d65fd103e5ca77.jpg","outputDir":"/home/tsuk1y0/Wallpapers","outFile":"/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.png","fileName":"7cee10cd6f2202c192d65fd103e5ca77","scale":"4","compression":"0","customWidth":"","useCustomWidth":false,"tileSize":null}
+[2026-01-02 03:10:19.356] [info]  📢 Upscayl Command:  [
+  '-i',
+  '/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg',
+  '-o',
+  '/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.png',
+  '-m',
+  '/usr/share/upscayl/models',
+  '-n',
+  'upscayl-standard-4x',
+  '-f',
+  'png',
+  '-c',
+  '0'
+]
+[2026-01-02 03:10:19.368] [info]  👶 Updating Child Processes:  {"binary":"/usr/share/upscayl/bin/upscayl-bin","args":["/usr/share/upscayl/bin/upscayl-bin","-i","/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg","-o","/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.png","-m","/usr/share/upscayl/models","-n","upscayl-standard-4x","-f","png","-c","0"]}
+[2026-01-02 03:10:19.369] [info]  🛑 Updating Stopped:  false
+[2026-01-02 03:10:19.370] [info]  🚀 Starting Upscayl - Copyright © 2024
+✨ Detected scale x4
+✨ Using the default scale x4
+
+[2026-01-02 03:10:19.371] [info]  🏁 UPSCAYL
+[2026-01-02 03:10:19.372] [info]  🎒 BACKEND REPORTED:  ✅ Upscayl Variables:  {"model":"upscayl-standard-4x","gpuId":null,"saveImageAs":"png","inputDir":"/home/tsuk1y0/Wallpapers","fileNameWithExt":"7cee10cd6f2202c192d65fd103e5ca77.jpg","outputDir":"/home/tsuk1y0/Wallpapers","outFile":"/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.png","fileName":"7cee10cd6f2202c192d65fd103e5ca77","scale":"4","compression":"0","customWidth":"","useCustomWidth":false,"tileSize":null}
+[2026-01-02 03:10:19.373] [info]  🎒 BACKEND REPORTED:  📢 Upscayl Command:  -i,/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg,-o,/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.png,-m,/usr/share/upscayl/models,-n,upscayl-standard-4x,-f,png,-c,0
+[2026-01-02 03:10:19.374] [info]  🎒 BACKEND REPORTED:  👶 Updating Child Processes:  {"binary":"/usr/share/upscayl/bin/upscayl-bin","args":["/usr/share/upscayl/bin/upscayl-bin","-i","/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg","-o","/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.png","-m","/usr/share/upscayl/models","-n","upscayl-standard-4x","-f","png","-c","0"]}
+[2026-01-02 03:10:19.374] [info]  🎒 BACKEND REPORTED:  🛑 Updating Stopped:  false
+[2026-01-02 03:10:19.374] [info]  🎒 BACKEND REPORTED:  🚀 Starting Upscayl - Copyright © 2024
+✨ Detected scale x4
+✨ Using the default scale x4
+
+[2026-01-02 03:10:19.375] [info]  🚧 UPSCAYL_PROGRESS:  🚀 Starting Upscayl - Copyright © 2024
+✨ Detected scale x4
+✨ Using the default scale x4
+
+[2026-01-02 03:10:19.389] [info]  [0 AMD Radeon Graphics (RADV RENOIR)]  queueC=1[4]  queueG=0[1]  queueT=0[1]
+[0 AMD Radeon Graphics (RADV RENOIR)]  bugsbn1=0  bugbilz=0  bugcopc=0  bugihfa=0
+[0 AMD Radeon Graphics (RADV RENOIR)]  fp16-p/s/a=1/1/1  int8-p/s/a=1/1/1
+[0 AMD Radeon Graphics (RADV RENOIR)]  subgroup=64  basic=1  vote=1  ballot=1  shuffle=1
+
+[2026-01-02 03:10:19.390] [info]  🎒 BACKEND REPORTED:  [0 AMD Radeon Graphics (RADV RENOIR)]  queueC=1[4]  queueG=0[1]  queueT=0[1]
+[0 AMD Radeon Graphics (RADV RENOIR)]  bugsbn1=0  bugbilz=0  bugcopc=0  bugihfa=0
+[0 AMD Radeon Graphics (RADV RENOIR)]  fp16-p/s/a=1/1/1  int8-p/s/a=1/1/1
+[0 AMD Radeon Graphics (RADV RENOIR)]  subgroup=64  basic=1  vote=1  ballot=1  shuffle=1
+
+[2026-01-02 03:10:19.392] [info]  🚧 UPSCAYL_PROGRESS:  [0 AMD Radeon Graphics (RADV RENOIR)]  queueC=1[4]  queueG=0[1]  queueT=0[1]
+[0 AMD Radeon Graphics (RADV RENOIR)]  bugsbn1=0  bugbilz=0  bugcopc=0  bugihfa=0
+[0 AMD Radeon Graphics (RADV RENOIR)]  fp16-p/s/a=1/1/1  int8-p/s/a=1/1/1
+[0 AMD Radeon Graphics (RADV RENOIR)]  subgroup=64  basic=1  vote=1  ballot=1  shuffle=1
+
+[2026-01-02 03:10:23.688] [info]  0.00%
+
+[2026-01-02 03:10:23.689] [info]  🎒 BACKEND REPORTED:  0.00%
+
+[2026-01-02 03:10:23.690] [info]  🚧 UPSCAYL_PROGRESS:  0.00%
+
+[2026-01-02 03:10:26.472] [info]  4.17%
+
+[2026-01-02 03:10:26.473] [info]  🎒 BACKEND REPORTED:  4.17%
+
+[2026-01-02 03:10:26.475] [info]  🚧 UPSCAYL_PROGRESS:  4.17%
+
+[2026-01-02 03:10:29.515] [info]  8.33%
+
+[2026-01-02 03:10:29.516] [info]  🎒 BACKEND REPORTED:  8.33%
+
+[2026-01-02 03:10:29.519] [info]  🚧 UPSCAYL_PROGRESS:  8.33%
+
+[2026-01-02 03:10:32.450] [info]  12.50%
+
+[2026-01-02 03:10:32.453] [info]  🎒 BACKEND REPORTED:  12.50%
+
+[2026-01-02 03:10:32.455] [info]  🚧 UPSCAYL_PROGRESS:  12.50%
+
+[2026-01-02 03:10:35.327] [info]  16.67%
+
+[2026-01-02 03:10:35.329] [info]  🎒 BACKEND REPORTED:  16.67%
+
+[2026-01-02 03:10:35.331] [info]  🚧 UPSCAYL_PROGRESS:  16.67%
+
+[2026-01-02 03:10:38.212] [info]  20.83%
+
+[2026-01-02 03:10:38.214] [info]  🎒 BACKEND REPORTED:  20.83%
+
+[2026-01-02 03:10:38.216] [info]  🚧 UPSCAYL_PROGRESS:  20.83%
+
+[2026-01-02 03:10:41.155] [info]  25.00%
+
+[2026-01-02 03:10:41.156] [info]  🎒 BACKEND REPORTED:  25.00%
+
+[2026-01-02 03:10:41.158] [info]  🚧 UPSCAYL_PROGRESS:  25.00%
+
+[2026-01-02 03:10:44.089] [info]  29.17%
+
+[2026-01-02 03:10:44.091] [info]  🎒 BACKEND REPORTED:  29.17%
+
+[2026-01-02 03:10:44.092] [info]  🚧 UPSCAYL_PROGRESS:  29.17%
+
+[2026-01-02 03:10:47.000] [info]  33.33%
+
+[2026-01-02 03:10:47.002] [info]  🎒 BACKEND REPORTED:  33.33%
+
+[2026-01-02 03:10:47.003] [info]  🚧 UPSCAYL_PROGRESS:  33.33%
+
+[2026-01-02 03:10:49.980] [info]  37.50%
+
+[2026-01-02 03:10:49.981] [info]  🎒 BACKEND REPORTED:  37.50%
+
+[2026-01-02 03:10:49.982] [info]  🚧 UPSCAYL_PROGRESS:  37.50%
+
+[2026-01-02 03:10:52.962] [info]  41.67%
+
+[2026-01-02 03:10:52.963] [info]  🎒 BACKEND REPORTED:  41.67%
+
+[2026-01-02 03:10:52.964] [info]  🚧 UPSCAYL_PROGRESS:  41.67%
+
+[2026-01-02 03:10:55.934] [info]  45.83%
+
+[2026-01-02 03:10:55.935] [info]  🎒 BACKEND REPORTED:  45.83%
+
+[2026-01-02 03:10:55.937] [info]  🚧 UPSCAYL_PROGRESS:  45.83%
+
+[2026-01-02 03:10:59.013] [info]  50.00%
+
+[2026-01-02 03:10:59.015] [info]  🎒 BACKEND REPORTED:  50.00%
+
+[2026-01-02 03:10:59.017] [info]  🚧 UPSCAYL_PROGRESS:  50.00%
+
+[2026-01-02 03:11:02.086] [info]  54.17%
+
+[2026-01-02 03:11:02.087] [info]  🎒 BACKEND REPORTED:  54.17%
+
+[2026-01-02 03:11:02.088] [info]  🚧 UPSCAYL_PROGRESS:  54.17%
+
+[2026-01-02 03:11:05.104] [info]  58.33%
+
+[2026-01-02 03:11:05.105] [info]  🎒 BACKEND REPORTED:  58.33%
+
+[2026-01-02 03:11:05.107] [info]  🚧 UPSCAYL_PROGRESS:  58.33%
+
+[2026-01-02 03:11:08.158] [info]  62.50%
+
+[2026-01-02 03:11:08.160] [info]  🎒 BACKEND REPORTED:  62.50%
+
+[2026-01-02 03:11:08.161] [info]  🚧 UPSCAYL_PROGRESS:  62.50%
+
+[2026-01-02 03:11:10.972] [info]  66.67%
+
+[2026-01-02 03:11:10.974] [info]  🎒 BACKEND REPORTED:  66.67%
+
+[2026-01-02 03:11:10.975] [info]  🚧 UPSCAYL_PROGRESS:  66.67%
+
+[2026-01-02 03:11:13.779] [info]  70.83%
+
+[2026-01-02 03:11:13.780] [info]  🎒 BACKEND REPORTED:  70.83%
+
+[2026-01-02 03:11:13.783] [info]  🚧 UPSCAYL_PROGRESS:  70.83%
+
+[2026-01-02 03:11:15.176] [info]  75.00%
+
+[2026-01-02 03:11:15.177] [info]  🎒 BACKEND REPORTED:  75.00%
+
+[2026-01-02 03:11:15.179] [info]  🚧 UPSCAYL_PROGRESS:  75.00%
+
+[2026-01-02 03:11:16.518] [info]  79.17%
+
+[2026-01-02 03:11:16.520] [info]  🎒 BACKEND REPORTED:  79.17%
+
+[2026-01-02 03:11:16.521] [info]  🚧 UPSCAYL_PROGRESS:  79.17%
+
+[2026-01-02 03:11:17.859] [info]  83.33%
+
+[2026-01-02 03:11:17.861] [info]  🎒 BACKEND REPORTED:  83.33%
+
+[2026-01-02 03:11:17.863] [info]  🚧 UPSCAYL_PROGRESS:  83.33%
+
+[2026-01-02 03:11:19.212] [info]  87.50%
+
+[2026-01-02 03:11:19.214] [info]  🎒 BACKEND REPORTED:  87.50%
+
+[2026-01-02 03:11:19.217] [info]  🚧 UPSCAYL_PROGRESS:  87.50%
+
+[2026-01-02 03:11:20.618] [info]  91.67%
+
+[2026-01-02 03:11:20.619] [info]  🎒 BACKEND REPORTED:  91.67%
+
+[2026-01-02 03:11:20.621] [info]  🚧 UPSCAYL_PROGRESS:  91.67%
+
+[2026-01-02 03:11:21.962] [info]  95.83%
+
+[2026-01-02 03:11:21.963] [info]  🎒 BACKEND REPORTED:  95.83%
+
+[2026-01-02 03:11:21.966] [info]  🚧 UPSCAYL_PROGRESS:  95.83%
+
+[2026-01-02 03:11:24.643] [info]  100.00%
+
+🙌 Upscayled Successfully!
+
+[2026-01-02 03:11:24.644] [info]  🎒 BACKEND REPORTED:  100.00%
+
+🙌 Upscayled Successfully!
+
+[2026-01-02 03:11:24.646] [info]  🚧 UPSCAYL_PROGRESS:  100.00%
+
+🙌 Upscayled Successfully!
+
+[2026-01-02 03:11:24.772] [info]  💯 Done upscaling
+[2026-01-02 03:11:24.788] [info]  🎒 BACKEND REPORTED:  💯 Done upscaling
+[2026-01-02 03:11:24.788] [info]  upscaledImagePath:  /home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.png
+[2026-01-02 03:11:24.789] [info]  💯 UPSCAYL_DONE:  /home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.png
+[2026-01-02 03:12:05.436] [info]  🔄 Resetting Upscaled Image Path
+[2026-01-02 03:12:05.437] [info]  ✅ Upscayl Variables:  {"model":"upscayl-standard-4x","gpuId":null,"saveImageAs":"jpg","inputDir":"/home/tsuk1y0/Wallpapers","fileNameWithExt":"7cee10cd6f2202c192d65fd103e5ca77.jpg","outputDir":"/home/tsuk1y0/Wallpapers","outFile":"/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.jpg","fileName":"7cee10cd6f2202c192d65fd103e5ca77","scale":"4","compression":"0","customWidth":"","useCustomWidth":false,"tileSize":null}
+[2026-01-02 03:12:05.437] [info]  📢 Upscayl Command:  [
+  '-i',
+  '/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg',
+  '-o',
+  '/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.jpg',
+  '-m',
+  '/usr/share/upscayl/models',
+  '-n',
+  'upscayl-standard-4x',
+  '-f',
+  'jpg',
+  '-c',
+  '0'
+]
+[2026-01-02 03:12:05.447] [info]  👶 Updating Child Processes:  {"binary":"/usr/share/upscayl/bin/upscayl-bin","args":["/usr/share/upscayl/bin/upscayl-bin","-i","/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg","-o","/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.png","-m","/usr/share/upscayl/models","-n","upscayl-standard-4x","-f","png","-c","0"]}
+[2026-01-02 03:12:05.448] [info]  🛑 Updating Stopped:  false
+[2026-01-02 03:12:05.448] [info]  🏁 UPSCAYL
+[2026-01-02 03:12:05.449] [info]  🚀 Starting Upscayl - Copyright © 2024
+✨ Detected scale x4
+✨ Using the default scale x4
+
+[2026-01-02 03:12:05.450] [info]  🎒 BACKEND REPORTED:  ✅ Upscayl Variables:  {"model":"upscayl-standard-4x","gpuId":null,"saveImageAs":"jpg","inputDir":"/home/tsuk1y0/Wallpapers","fileNameWithExt":"7cee10cd6f2202c192d65fd103e5ca77.jpg","outputDir":"/home/tsuk1y0/Wallpapers","outFile":"/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.jpg","fileName":"7cee10cd6f2202c192d65fd103e5ca77","scale":"4","compression":"0","customWidth":"","useCustomWidth":false,"tileSize":null}
+[2026-01-02 03:12:05.450] [info]  🎒 BACKEND REPORTED:  📢 Upscayl Command:  -i,/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg,-o,/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.jpg,-m,/usr/share/upscayl/models,-n,upscayl-standard-4x,-f,jpg,-c,0
+[2026-01-02 03:12:05.451] [info]  🎒 BACKEND REPORTED:  👶 Updating Child Processes:  {"binary":"/usr/share/upscayl/bin/upscayl-bin","args":["/usr/share/upscayl/bin/upscayl-bin","-i","/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77.jpg","-o","/home/tsuk1y0/Wallpapers/7cee10cd6f2202c192d65fd103e5ca77_upscayl_4x_upscayl-standard-4x.png","-m","/usr/share/upscayl/models","-n","upscayl-standard-4x","-f","png","-c","0"]}
+[2026-01-02 03:12:05.452] [info]  🎒 BACKEND REPORTED:  🛑 Updating Stopped:  false
+[2026-01-02 03:12:05.452] [info]  🎒 BACKEND REPORTED:  🚀 Starting Upscayl - Copyright © 2024
+✨ Detected scale x4
+✨ Using the default scale x4
+
+[2026-01-02 03:12:05.453] [info]  🚧 UPSCAYL_PROGRESS:  🚀 Starting Upscayl - Copyright © 2024
+✨ Detected scale x4
+✨ Using the default scale x4
+
+[2026-01-02 03:12:05.467] [info]  [0 AMD Radeon Graphics (RADV RENOIR)]  queueC=1[4]  queueG=0[1]  queueT=0[1]
+[0 AMD Radeon Graphics (RADV RENOIR)]  bugsbn1=0  bugbilz=0  bugcopc=0  bugihfa=0
+[0 AMD Radeon Graphics (RADV RENOIR)]  fp16-p/s/a=1/1/1  int8-p/s/a=1/1/1
+[0 AMD Radeon Graphics (RADV RENOIR)]  subgroup=64  basic=1  vote=1  ballot=1  shuffle=1
+
+[2026-01-02 03:12:05.468] [info]  🎒 BACKEND REPORTED:  [0 AMD Radeon Graphics (RADV RENOIR)]  queueC=1[4]  queueG=0[1]  queueT=0[1]
+[0 AMD Radeon Graphics (RADV RENOIR)]  bugsbn1=0  bugbilz=0  bugcopc=0  bugihfa=0
+[0 AMD Radeon Graphics (RADV RENOIR)]  fp16-p/s/a=1/1/1  int8-p/s/a=1/1/1
+[0 AMD Radeon Graphics (RADV RENOIR)]  subgroup=64  basic=1  vote=1  ballot=1  shuffle=1
+
+[2026-01-02 03:12:05.470] [info]  🚧 UPSCAYL_PROGRESS:  [0 AMD Radeon Graphics (RADV RENOIR)]  queueC=1[4]  queueG=0[1]  queueT=0[1]
+[0 AMD Radeon Graphics (RADV RENOIR)]  bugsbn1=0  bugbilz=0  bugcopc=0  bugihfa=0
+[0 AMD Radeon Graphics (RADV RENOIR)]  fp16-p/s/a=1/1/1  int8-p/s/a=1/1/1
+[0 AMD Radeon Graphics (RADV RENOIR)]  subgroup=64  basic=1  vote=1  ballot=1  shuffle=1
+
+[2026-01-02 03:12:06.565] [info]  🛑 Updating Stopped:  true
+[2026-01-02 03:12:06.566] [info]  🛑 Stopping Upscaling Process 531633
+[2026-01-02 03:12:06.569] [info]  🛑 Stopping Upscaling Process 531815
+[2026-01-02 03:12:06.570] [info]  🛑 Stopping Upscayl
+[2026-01-02 03:12:06.570] [info]  🔄 Resetting image paths
+[2026-01-02 03:12:06.571] [info]  🎒 BACKEND REPORTED:  🛑 Updating Stopped:  true
+[2026-01-02 03:12:06.571] [info]  🎒 BACKEND REPORTED:  🛑 Stopping Upscaling Process 531633
+[2026-01-02 03:12:06.571] [info]  🎒 BACKEND REPORTED:  🛑 Stopping Upscaling Process 531815
+[2026-01-02 03:12:35.492] [info]  🔄 Resetting image paths
+[2026-01-02 03:12:38.547] [info]  🚫 File Operation Cancelled
+[2026-01-02 03:12:38.548] [info]  🎒 BACKEND REPORTED:  🚫 File Operation Cancelled

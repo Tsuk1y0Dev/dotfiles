@@ -1,0 +1,18 @@
+[[manager.prepend_keymap]]
+on   = [ "f" ]
+run  = "plugin fzf"
+desc = "Поиск через fzf"
+
+[[manager.prepend_keymap]]
+on   = [ "c", "m" ]
+run  = "plugin chmod"
+desc = "Изменить права (chmod)"
+
+[[manager.prepend_keymap]]
+on   = [ "T" ]
+run  = "plugin max-preview"
+desc = "Превью на весь экран"
+
+[[manager.prepend_keymap]]
+on   = [ "<C-d>" ]
+run  = '''shell 'ripdrag "$@" -x 2>/dev/null &' --confirm'''

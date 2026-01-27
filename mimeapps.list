@@ -1,0 +1,4 @@
+
+[Default Applications]
+x-scheme-handler/anytype=anytype.desktop
+inode/directory=название_файла.desktop

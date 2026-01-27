@@ -1,0 +1,33 @@
+# Браузеры и музыка (Куки, история, сессии)
+chromium/
+mozilla/
+YandexMusic/
+anytype/
+Bitwarden/
+
+# Кэши, сокеты и временные файлы
+pulse/
+fontconfig/
+dconf/
+kde-material-you-colors/
+Kvantum/
+yay/
+session/
+xdg-desktop-portal/
+gthumb/
+nautilus/
+libreoffice/
+
+# Электрон и IDE (могут содержать токены)
+Code - OSS/
+VSCodium/
+Electron/
+Proton/
+
+# Системный шум KDE/Qt
+baloofileinformationrc
+kactivitymanagerdrc
+kconf_updaterc
+kdeglobals
+kiorc
+kscreenlockerrc
