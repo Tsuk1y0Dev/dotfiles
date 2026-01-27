@@ -1,0 +1,26 @@
+#!/bin/bash
+
+cd ~/.config || exit
+
+# Проверка на приватные данные перед индексацией
+if git status | grep -E "Bitwarden|YandexMusic|chromium|mozilla" >/dev/null; then
+  echo "Error: Private data detected in status. Check .gitignore."
+  exit 1
+fi
+
+if ping -c 1 github.com &>/dev/null; then
+  echo "Starting sync..."
+  git add .
+
+  # Проверка, есть ли что коммитить
+  if git diff-index --quiet HEAD --; then
+    echo "No changes to commit."
+  else
+    git commit -m "Backup: $(date +'%Y-%m-%d %H:%M:%S')"
+    git push origin main
+    echo "Sync complete."
+  fi
+else
+  echo "Error: No internet connection."
+  exit 1
+fi
