@@ -1,5 +1,0 @@
-#!/bin/bash
-# Выбираем файл и открываем его в nvim
-file=$(fzf --preview "bat --color=always --style=numbers {}")
-[ -n "$file" ] && nvim "$file"
-

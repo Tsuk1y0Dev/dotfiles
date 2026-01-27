@@ -32,7 +32,6 @@ export LC_ALL=en_US.UTF-8
 # Работа со скриптами и конфигами
 alias dots='~/bin/dots-sync'     # Бэкап дотов
 alias strace='~/bin/sys-trace'   # Чек ошибок системы
-alias pview='~/bin/preview'      # FZF-просмотр файлов
 alias perf='~/bin/toggle-hypr'   # Выкл анимации
 alias getfonts='~/bin/get-fonts' # Список шрифтов
 

@@ -1,2 +1,0 @@
-#!/bin/bash
-fc-list : family | grep -iE "nerd|icon|symbol|emoji" | sort | uniq
