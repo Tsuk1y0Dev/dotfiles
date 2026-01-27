@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "--- SYSTEM ERRORS ---"
+journalctl -p 3 -xb | tail -n 10
+echo "--- HYPRLAND LOG ---"
+cat /tmp/hypr/$(ls -t /tmp/hypr/ | head -n 1)/hyprland.log | tail -n 10

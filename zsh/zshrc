@@ -29,8 +29,14 @@ export LC_CTYPE=ru_RU.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # ===== АЛИАСЫ (СОКРАЩЕНИЯ) =====
-#Бэкап дотов
-alias dots='~/bin/dots-sync'
+# Работа со скриптами и конфигами
+alias dots='~/bin/dots-sync'     # Бэкап дотов
+alias rswap='~/bin/rice-swap'    # Быстрая смена райса
+alias rlist='ls ~/Rice/Profiles' # Список сборок
+alias strace='~/bin/sys-trace'   # Чек ошибок системы
+alias pview='~/bin/preview'      # FZF-просмотр файлов
+alias perf='~/bin/toggle-hypr'   # Выкл анимации
+alias getfonts='~/bin/get-fonts' # Список шрифтов
 
 # Безопасность
 alias rm='rm -i'

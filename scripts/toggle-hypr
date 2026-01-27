@@ -1,0 +1,11 @@
+#!/bin/bash
+if pgrep -x "waybar" > /dev/null; then
+    pkill waybar
+    hyprctl keyword animations:enabled 0
+    echo "Performance mode: ON"
+else
+    waybar &
+    hyprctl keyword animations:enabled 1
+    echo "Performance mode: OFF"
+fi
+
