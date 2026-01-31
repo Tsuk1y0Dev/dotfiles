@@ -1,4 +1,9 @@
-
 [Default Applications]
 x-scheme-handler/anytype=anytype.desktop
 inode/directory=название_файла.desktop
+x-scheme-handler/tg=userapp-AyuGram Desktop-R26UJ3.desktop
+x-scheme-handler/tonsite=userapp-AyuGram Desktop-RM6VJ3.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-AyuGram Desktop-R26UJ3.desktop;
+x-scheme-handler/tonsite=userapp-AyuGram Desktop-RM6VJ3.desktop;

@@ -1,9 +1,12 @@
 [manager]
 show_hidden = true
 sort_by = "natural"
+cwd = { fg = "#89dceb" }
+hovered         = { fg = "#1e1e2e", bg = "#cba6f7" }
+preview_hovered = { underline = true }
+status_column   = { fg = "#a6adc8", bg = "#000000" }
 
 [preview]
-# Ueberzugpp — лучший выбор для Hyprland/Wayland
 preview_method = "ueberzug"
 max_width = 1200
 max_height = 1200
@@ -11,4 +14,7 @@ max_height = 1200
 [opener]
 edit = [{ run = 'nvim "$@"', block = true }]
 play = [{ run = 'mpv "$@"', orphan = true }]
+
+[flavor]
+use = "catppuccin-mocha-mauve"
 
