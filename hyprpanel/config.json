@@ -77,5 +77,13 @@
   "theme.osd.location": "top right",
   "menus.volume.raiseMaximumVolume": false,
   "menus.dashboard.controls.enabled": true,
-  "menus.dashboard.recording.path": "$HOME/Media/Videos/Screencasts"
+  "menus.dashboard.recording.path": "$HOME/Media/Videos/Screencasts",
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut2.icon": "󰝚",
+  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Yandex Music",
+  "menus.dashboard.shortcuts.left.shortcut2.command": "kitty -e yamusic",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "chromium",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Chromium",
+  "menus.dashboard.shortcuts.left.shortcut4.command": "kitty -e btop",
+  "menus.dashboard.shortcuts.left.shortcut4.icon": ""
 }
