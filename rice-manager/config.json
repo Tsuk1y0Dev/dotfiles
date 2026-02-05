@@ -1,0 +1,13 @@
+{
+    "managed_apps": "hypr,waybar,rofi,dunst,kitty,quickshell,eww,swww,foot,alacritty",
+    "backup_before_switch": true,
+    "max_backups": 10,
+    "log_level": "INFO",
+    "interactive_selector": "fzf",
+    "auto_start_components": true,
+    "notify_on_completion": true,
+    "color_output": true,
+    "create_missing_app_dirs": true,
+    "stop_processes_timeout": 5,
+    "component_start_delay": 0.5
+}

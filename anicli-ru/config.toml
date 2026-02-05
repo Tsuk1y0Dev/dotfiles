@@ -13,10 +13,10 @@ yummyanime = 'site.yummyani.me'
 [Players]
 syncInterval = '3d'
 domains = [
-  'kodik.info',
   'aniboom.one',
-  'alloha.yani.tv',
   'video.sibnet.ru',
+  'kodik.info',
   'vk.com',
+  'alloha.yani.tv',
   'aksor.yani.tv'
 ]

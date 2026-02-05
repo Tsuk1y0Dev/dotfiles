@@ -1,0 +1,81 @@
+{
+  "theme.bar.floating": true,
+  "theme.bar.height": "2.1rem",
+  "theme.bar.margin_top": "0.5rem",
+  "theme.bar.margin_left": "0.7rem",
+  "theme.bar.margin_right": "0.7rem",
+  "theme.bar.border_radius": "0.7rem",
+  "theme.bar.border_width": "1px",
+  "theme.bar.opacity": 70,
+  "theme.bar.buttons.style": "split",
+  "theme.bar.buttons.spacing": "0.25em",
+  "theme.bar.buttons.x_margins": "0.3em",
+  "theme.bar.buttons.y_margins": "0.1em",
+  "theme.bar.buttons.radius": "0.5rem",
+  "theme.bar.outer_spacing": "0.4em",
+  "theme.font.name": "JetBrainsMono Nerd Font",
+  "theme.font.size": "10pt",
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media",
+        "systray"
+      ],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "clock",
+        "notifications"
+      ]
+    }
+  },
+  "bar.workspaces.style": "duo",
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.spacing": 6,
+  "bar.media.show_text": true,
+  "bar.media.truncation_size": 25,
+  "bar.notifications.show_total": true,
+  "menus.clock.weather.key": "7c68b0cc9587296388f7f4ec3ed05a11",
+  "menus.clock.weather.location": "672000",
+  "menus.clock.weather.unit": "metric",
+  "theme.matugen": false,
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "menus.media.hideAuthor": false,
+  "menus.media.hideAlbum": false,
+  "menus.media.displayTime": false,
+  "menus.media.displayTimeTooltip": false,
+  "theme.bar.buttons.media.enableBorder": false,
+  "bar.media.truncation": true,
+  "bar.media.show_label": true,
+  "bar.media.show_active_only": false,
+  "theme.matugen_settings.scheme_type": "tonal-spot",
+  "wallpaper.image": "/home/tsuk1y0/Media/Wallpapers/kurzgesagt/Cloudy_Quasar_1-Catppuccin_Mocha.png",
+  "theme.bar.menus.monochrome": false,
+  "theme.bar.transparent": false,
+  "theme.bar.background": "#11111b",
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "bar.workspaces.monitorSpecific": true,
+  "bar.workspaces.show_numbered": false,
+  "bar.workspaces.workspaceMask": true,
+  "bar.workspaces.showWsIcons": true,
+  "bar.workspaces.applicationIconOncePerWorkspace": false,
+  "bar.workspaces.showApplicationIcons": false,
+  "bar.workspaces.showAllActive": true,
+  "bar.workspaces.ignored": "-99",
+  "bar.workspaces.numbered_active_indicator": "underline",
+  "theme.osd.enable": true,
+  "theme.osd.orientation": "vertical",
+  "theme.osd.location": "top right",
+  "menus.volume.raiseMaximumVolume": false,
+  "menus.dashboard.controls.enabled": true,
+  "menus.dashboard.recording.path": "$HOME/Media/Videos/Screencasts"
+}

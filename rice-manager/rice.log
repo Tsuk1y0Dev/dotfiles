@@ -1,0 +1,523 @@
+2026-01-31 20:31:26 [ERROR] Нет доступных профилей
+[2026-01-31 22:00:36] [DEBUG] Lock acquired (PID: 15884)
+[2026-01-31 22:00:36] [DEBUG] Lock released
+[2026-01-31 22:02:45] [DEBUG] Lock acquired (PID: 16228)
+[2026-01-31 22:02:45] [INFO] Running system diagnostic...
+[2026-01-31 22:02:45] [SUCCESS] System check passed
+[2026-01-31 22:02:45] [DEBUG] Lock released
+[2026-01-31 22:05:27] [DEBUG] Lock acquired (PID: 16455)
+[2026-01-31 22:05:27] [ERROR] Unknown command: рудз
+[2026-01-31 22:05:27] [DEBUG] Lock released
+[2026-01-31 22:05:29] [DEBUG] Lock acquired (PID: 16483)
+[2026-01-31 22:05:29] [DEBUG] Lock released
+[2026-01-31 22:06:14] INFO: Creating profile: test-profile
+[2026-01-31 22:06:14] SUCCESS: Profile 'test-profile' created
+[2026-01-31 22:06:14] INFO: Switching to profile: test-profile
+[2026-01-31 22:06:14] INFO:   Linked: hypr
+[2026-01-31 22:06:14] INFO:   Linked: kitty
+[2026-01-31 22:06:14] INFO:   Linked: eww
+[2026-01-31 22:06:14] INFO:   Linked: waybar
+[2026-01-31 22:06:14] INFO:   Linked: dunst
+[2026-01-31 22:06:14] INFO:   Linked: quickshell
+[2026-01-31 22:06:14] INFO: Reloading Hyprland...
+[2026-01-31 22:06:14] SUCCESS: Hyprland reloaded
+[2026-01-31 22:06:14] INFO: Starting components...
+[2026-01-31 22:06:15] INFO:   Started: dunst
+[2026-01-31 22:06:15] SUCCESS: Profile 'test-profile' activated
+[2026-01-31 22:07:04] [DEBUG] Lock acquired (PID: 17062)
+[2026-01-31 22:07:04] [DEBUG] Lock released
+[2026-01-31 22:10:16] INFO: Switching to profile: MyPerfectRice
+[2026-01-31 22:10:16] INFO:   Linked: hypr
+[2026-01-31 22:10:16] INFO:   Linked: kitty
+[2026-01-31 22:10:16] INFO:   Linked: eww
+[2026-01-31 22:10:16] INFO:   Linked: rofi
+[2026-01-31 22:10:16] INFO: Reloading Hyprland...
+[2026-01-31 22:10:16] SUCCESS: Hyprland reloaded
+[2026-01-31 22:10:16] INFO: Starting components...
+[2026-01-31 22:10:18] INFO:   Started: eww
+[2026-01-31 22:10:18] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-01-31 22:11:09] INFO: Switching to profile: hyprdots
+[2026-01-31 22:11:10] INFO:   Linked: hypr
+[2026-01-31 22:11:10] INFO:   Linked: waybar
+[2026-01-31 22:11:10] INFO:   Linked: dunst
+[2026-01-31 22:11:10] INFO:   Linked: rofi
+[2026-01-31 22:11:10] INFO: Reloading Hyprland...
+[2026-01-31 22:11:10] SUCCESS: Hyprland reloaded
+[2026-01-31 22:11:10] INFO: Starting components...
+[2026-01-31 22:11:11] INFO:   Started: dunst
+[2026-01-31 22:11:11] SUCCESS: Profile 'hyprdots' activated
+[2026-01-31 22:11:15] INFO: Switching to profile: MyPerfectRice
+[2026-01-31 22:11:15] INFO:   Linked: hypr
+[2026-01-31 22:11:15] INFO:   Linked: kitty
+[2026-01-31 22:11:15] INFO:   Linked: eww
+[2026-01-31 22:11:15] INFO:   Linked: rofi
+[2026-01-31 22:11:15] INFO: Reloading Hyprland...
+[2026-01-31 22:11:15] SUCCESS: Hyprland reloaded
+[2026-01-31 22:11:15] INFO: Starting components...
+[2026-01-31 22:11:17] INFO:   Started: eww
+[2026-01-31 22:11:17] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-01-31 22:11:50] INFO: Switching to profile: MyPerfectRice
+[2026-01-31 22:11:50] INFO:   Linked: hypr
+[2026-01-31 22:11:50] INFO:   Linked: kitty
+[2026-01-31 22:11:50] INFO:   Linked: eww
+[2026-01-31 22:11:50] INFO:   Linked: rofi
+[2026-01-31 22:11:50] INFO: Reloading Hyprland...
+[2026-01-31 22:11:50] SUCCESS: Hyprland reloaded
+[2026-01-31 22:11:50] INFO: Starting components...
+[2026-01-31 22:11:51] INFO:   Started: eww
+[2026-01-31 22:11:51] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-01 07:10:49] INFO: Switching to profile: MyPerfectRice
+[2026-02-01 07:10:49] INFO:   Linked: hypr
+[2026-02-01 07:10:49] INFO:   Linked: kitty
+[2026-02-01 07:10:49] INFO:   Linked: eww
+[2026-02-01 07:10:49] INFO:   Linked: rofi
+[2026-02-01 07:10:49] INFO: Reloading Hyprland...
+[2026-02-01 07:10:49] SUCCESS: Hyprland reloaded
+[2026-02-01 07:10:49] INFO: Starting components...
+[2026-02-01 07:10:51] INFO:   Started: eww
+[2026-02-01 07:10:51] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-01 07:11:08] INFO: Switching to profile: MyPerfectRice
+[2026-02-01 07:11:09] INFO:   Linked: hypr
+[2026-02-01 07:11:09] INFO:   Linked: kitty
+[2026-02-01 07:11:09] INFO:   Linked: eww
+[2026-02-01 07:11:09] INFO:   Linked: rofi
+[2026-02-01 07:11:09] INFO: Reloading Hyprland...
+[2026-02-01 07:11:09] SUCCESS: Hyprland reloaded
+[2026-02-01 07:11:09] INFO: Starting components...
+[2026-02-01 07:11:10] INFO:   Started: eww
+[2026-02-01 07:11:10] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-01 07:12:13] INFO: Switching to profile: MyPerfectRice
+[2026-02-01 07:12:13] INFO:   Linked: hypr
+[2026-02-01 07:12:13] INFO:   Linked: kitty
+[2026-02-01 07:12:13] INFO:   Linked: eww
+[2026-02-01 07:12:13] INFO:   Linked: rofi
+[2026-02-01 07:12:13] INFO: Reloading Hyprland...
+[2026-02-01 07:12:13] SUCCESS: Hyprland reloaded
+[2026-02-01 07:12:13] INFO: Starting components...
+[2026-02-01 07:12:15] INFO:   Started: eww
+[2026-02-01 07:12:15] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-01 16:59:58] INFO: Switching to profile: MyPerfectRice
+[2026-02-01 16:59:58] INFO:   Linked: hypr
+[2026-02-01 16:59:58] INFO:   Linked: kitty
+[2026-02-01 16:59:58] INFO:   Linked: eww
+[2026-02-01 16:59:58] INFO:   Linked: rofi
+[2026-02-01 16:59:58] INFO: Reloading Hyprland...
+[2026-02-01 16:59:58] SUCCESS: Hyprland reloaded
+[2026-02-01 16:59:58] INFO: Starting components...
+[2026-02-01 17:00:00] INFO:   Started: eww
+[2026-02-01 17:00:00] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 07:35:47] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 07:35:47] INFO:   Linked: hypr
+[2026-02-02 07:35:47] INFO:   Linked: kitty
+[2026-02-02 07:35:47] INFO:   Linked: eww
+[2026-02-02 07:35:47] INFO:   Linked: rofi
+[2026-02-02 07:35:47] INFO: Reloading Hyprland...
+[2026-02-02 07:35:48] SUCCESS: Hyprland reloaded
+[2026-02-02 07:35:48] INFO: Starting components...
+[2026-02-02 07:35:49] INFO:   Started: eww
+[2026-02-02 07:35:49] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 07:43:56] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 07:47:16] INFO: Switching to profile: hyprdots
+[2026-02-02 07:47:16] INFO:   Linked: hypr
+[2026-02-02 07:47:16] INFO:   Linked: waybar
+[2026-02-02 07:47:16] INFO:   Linked: dunst
+[2026-02-02 07:47:16] INFO:   Linked: rofi
+[2026-02-02 07:47:16] INFO: Reloading Hyprland...
+[2026-02-02 07:47:16] SUCCESS: Hyprland reloaded
+[2026-02-02 07:47:16] INFO: Starting components...
+[2026-02-02 07:47:17] INFO:   Started: dunst
+[2026-02-02 07:47:17] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 07:47:19] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 07:47:19] INFO:   Linked: hypr
+[2026-02-02 07:47:19] INFO:   Linked: kitty
+[2026-02-02 07:47:19] INFO:   Linked: eww
+[2026-02-02 07:47:19] INFO:   Linked: rofi
+[2026-02-02 07:47:19] INFO:   Linked: hyprpanel
+[2026-02-02 07:47:19] INFO: Reloading Hyprland...
+[2026-02-02 07:47:19] SUCCESS: Hyprland reloaded
+[2026-02-02 07:47:19] INFO: Starting components...
+[2026-02-02 07:47:21] INFO:   hyprpanel config not found
+[2026-02-02 07:47:21] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 07:50:27] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 07:50:28] INFO:   Linked: hypr
+[2026-02-02 07:50:28] INFO:   Linked: kitty
+[2026-02-02 07:50:28] INFO:   Linked: eww
+[2026-02-02 07:50:28] INFO:   Linked: rofi
+[2026-02-02 07:50:28] INFO:   Linked: hyprpanel
+[2026-02-02 07:50:28] INFO: Reloading Hyprland...
+[2026-02-02 07:50:28] SUCCESS: Hyprland reloaded
+[2026-02-02 07:50:28] INFO: Starting components...
+[2026-02-02 07:50:29] INFO:   hyprpanel config not found
+[2026-02-02 07:50:29] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:34:05] INFO: Switching to profile: hyprdots
+[2026-02-02 21:34:05] INFO:   Linked: hypr
+[2026-02-02 21:34:05] INFO:   Linked: waybar
+[2026-02-02 21:34:05] INFO:   Linked: dunst
+[2026-02-02 21:34:05] INFO:   Linked: rofi
+[2026-02-02 21:34:05] INFO: Reloading Hyprland...
+[2026-02-02 21:34:05] SUCCESS: Hyprland reloaded
+[2026-02-02 21:34:05] INFO: Starting components...
+[2026-02-02 21:34:06] INFO:   Started: dunst
+[2026-02-02 21:34:06] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 21:34:55] INFO: Switching to profile: hyprdots
+[2026-02-02 21:34:55] INFO:   Linked: hypr
+[2026-02-02 21:34:55] INFO:   Linked: waybar
+[2026-02-02 21:34:55] INFO:   Linked: dunst
+[2026-02-02 21:34:55] INFO:   Linked: rofi
+[2026-02-02 21:34:55] INFO: Reloading Hyprland...
+[2026-02-02 21:34:55] SUCCESS: Hyprland reloaded
+[2026-02-02 21:34:55] INFO: Starting components...
+[2026-02-02 21:34:56] INFO:   Started: dunst
+[2026-02-02 21:34:56] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 21:35:33] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:35:33] INFO:   Linked: hypr
+[2026-02-02 21:35:33] INFO:   Linked: kitty
+[2026-02-02 21:35:33] INFO:   Linked: eww
+[2026-02-02 21:35:33] INFO:   Linked: rofi
+[2026-02-02 21:35:33] INFO:   Linked: hyprpanel
+[2026-02-02 21:35:33] INFO: Reloading Hyprland...
+[2026-02-02 21:35:33] SUCCESS: Hyprland reloaded
+[2026-02-02 21:35:33] INFO: Starting components...
+[2026-02-02 21:35:35] INFO:   hyprpanel config not found
+[2026-02-02 21:35:35] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:41:48] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:41:48] INFO:   Linked: hypr
+[2026-02-02 21:41:48] INFO:   Linked: kitty
+[2026-02-02 21:41:48] INFO:   Linked: eww
+[2026-02-02 21:41:48] INFO:   Linked: rofi
+[2026-02-02 21:41:48] INFO:   Linked: hyprpanel
+[2026-02-02 21:41:48] INFO: Reloading Hyprland...
+[2026-02-02 21:41:48] SUCCESS: Hyprland reloaded
+[2026-02-02 21:41:48] INFO: Starting components...
+[2026-02-02 21:41:49] INFO:   Started: hyprpanel
+[2026-02-02 21:41:50] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:41:53] INFO: Switching to profile: hyprdots
+[2026-02-02 21:41:53] INFO:   Linked: hypr
+[2026-02-02 21:41:53] INFO:   Linked: waybar
+[2026-02-02 21:41:53] INFO:   Linked: dunst
+[2026-02-02 21:41:53] INFO:   Linked: rofi
+[2026-02-02 21:41:53] INFO: Reloading Hyprland...
+[2026-02-02 21:41:53] SUCCESS: Hyprland reloaded
+[2026-02-02 21:41:53] INFO: Starting components...
+[2026-02-02 21:41:54] INFO:   Started: waybar
+[2026-02-02 21:41:54] INFO:   Started: dunst
+[2026-02-02 21:41:54] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 21:41:59] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:41:59] INFO:   Linked: hypr
+[2026-02-02 21:41:59] INFO:   Linked: kitty
+[2026-02-02 21:41:59] INFO:   Linked: eww
+[2026-02-02 21:41:59] INFO:   Linked: rofi
+[2026-02-02 21:41:59] INFO:   Linked: hyprpanel
+[2026-02-02 21:41:59] INFO: Reloading Hyprland...
+[2026-02-02 21:41:59] SUCCESS: Hyprland reloaded
+[2026-02-02 21:41:59] INFO: Starting components...
+[2026-02-02 21:42:00] INFO:   Started: hyprpanel
+[2026-02-02 21:42:01] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:43:12] INFO: Switching to profile: hyprdots
+[2026-02-02 21:43:12] INFO:   Linked: hypr
+[2026-02-02 21:43:12] INFO:   Linked: waybar
+[2026-02-02 21:43:12] INFO:   Linked: dunst
+[2026-02-02 21:43:12] INFO:   Linked: rofi
+[2026-02-02 21:43:12] INFO: Reloading Hyprland...
+[2026-02-02 21:43:13] SUCCESS: Hyprland reloaded
+[2026-02-02 21:43:13] INFO: Starting components...
+[2026-02-02 21:43:14] INFO:   Started: waybar
+[2026-02-02 21:43:14] INFO:   Started: dunst
+[2026-02-02 21:43:14] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 21:43:17] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:43:17] INFO:   Linked: hypr
+[2026-02-02 21:43:17] INFO:   Linked: kitty
+[2026-02-02 21:43:17] INFO:   Linked: eww
+[2026-02-02 21:43:17] INFO:   Linked: rofi
+[2026-02-02 21:43:17] INFO:   Linked: hyprpanel
+[2026-02-02 21:43:17] INFO: Reloading Hyprland...
+[2026-02-02 21:43:17] SUCCESS: Hyprland reloaded
+[2026-02-02 21:43:17] INFO: Starting components...
+[2026-02-02 21:43:18] INFO:   Started: hyprpanel
+[2026-02-02 21:43:19] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:48:04] INFO: Switching to profile: hyprdots
+[2026-02-02 21:48:04] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:48:05] ERROR: Failed to stop some hyprpanel processes
+[2026-02-02 21:48:05] INFO:   Linked: hypr
+[2026-02-02 21:48:05] INFO:   Linked: waybar
+[2026-02-02 21:48:05] INFO:   Linked: dunst
+[2026-02-02 21:48:05] INFO:   Linked: rofi
+[2026-02-02 21:48:05] INFO: Reloading Hyprland...
+[2026-02-02 21:48:05] SUCCESS: Hyprland reloaded
+[2026-02-02 21:48:05] INFO: Starting components...
+[2026-02-02 21:48:06] INFO:   Started: waybar
+[2026-02-02 21:48:06] INFO:   Started: dunst
+[2026-02-02 21:48:06] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 21:48:09] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:48:09] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:48:09] ERROR: Failed to stop some hyprpanel processes
+[2026-02-02 21:48:09] INFO:   Linked: hypr
+[2026-02-02 21:48:09] INFO:   Linked: kitty
+[2026-02-02 21:48:09] INFO:   Linked: eww
+[2026-02-02 21:48:09] INFO:   Linked: rofi
+[2026-02-02 21:48:09] INFO:   Linked: hyprpanel
+[2026-02-02 21:48:09] INFO: Reloading Hyprland...
+[2026-02-02 21:48:09] SUCCESS: Hyprland reloaded
+[2026-02-02 21:48:10] INFO: Starting components...
+[2026-02-02 21:48:11] INFO:   Started: hyprpanel
+[2026-02-02 21:48:12] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:48:44] INFO: Switching to profile: hyprdots
+[2026-02-02 21:48:44] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:48:44] ERROR: Failed to stop some hyprpanel processes
+[2026-02-02 21:48:44] INFO:   Linked: hypr
+[2026-02-02 21:48:44] INFO:   Linked: waybar
+[2026-02-02 21:48:44] INFO:   Linked: dunst
+[2026-02-02 21:48:44] INFO:   Linked: rofi
+[2026-02-02 21:48:44] INFO: Reloading Hyprland...
+[2026-02-02 21:48:44] SUCCESS: Hyprland reloaded
+[2026-02-02 21:48:44] INFO: Starting components...
+[2026-02-02 21:48:45] INFO:   Started: waybar
+[2026-02-02 21:48:45] INFO:   Started: dunst
+[2026-02-02 21:48:45] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 21:48:48] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:48:48] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:48:48] ERROR: Failed to stop some hyprpanel processes
+[2026-02-02 21:48:48] INFO:   Linked: hypr
+[2026-02-02 21:48:48] INFO:   Linked: kitty
+[2026-02-02 21:48:48] INFO:   Linked: eww
+[2026-02-02 21:48:48] INFO:   Linked: rofi
+[2026-02-02 21:48:48] INFO:   Linked: hyprpanel
+[2026-02-02 21:48:48] INFO: Reloading Hyprland...
+[2026-02-02 21:48:48] SUCCESS: Hyprland reloaded
+[2026-02-02 21:48:48] INFO: Starting components...
+[2026-02-02 21:48:50] INFO:   Started: hyprpanel
+[2026-02-02 21:48:50] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:49:02] INFO: Switching to profile: hyprdots
+[2026-02-02 21:49:02] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:49:02] INFO:   Stopped hyprpanel
+[2026-02-02 21:49:02] ERROR: Failed to stop some hyprpanel processes
+[2026-02-02 21:49:02] INFO:   Linked: hypr
+[2026-02-02 21:49:02] INFO:   Linked: waybar
+[2026-02-02 21:49:02] INFO:   Linked: dunst
+[2026-02-02 21:49:02] INFO:   Linked: rofi
+[2026-02-02 21:49:02] INFO: Reloading Hyprland...
+[2026-02-02 21:49:02] SUCCESS: Hyprland reloaded
+[2026-02-02 21:49:02] INFO: Starting components...
+[2026-02-02 21:49:03] INFO:   Started: waybar
+[2026-02-02 21:49:03] INFO:   Started: dunst
+[2026-02-02 21:49:03] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 21:49:08] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:49:08] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:49:08] ERROR: Failed to stop some hyprpanel processes
+[2026-02-02 21:49:08] INFO:   Linked: hypr
+[2026-02-02 21:49:08] INFO:   Linked: kitty
+[2026-02-02 21:49:08] INFO:   Linked: eww
+[2026-02-02 21:49:08] INFO:   Linked: rofi
+[2026-02-02 21:49:08] INFO:   Linked: hyprpanel
+[2026-02-02 21:49:08] INFO: Reloading Hyprland...
+[2026-02-02 21:49:08] SUCCESS: Hyprland reloaded
+[2026-02-02 21:49:08] INFO: Starting components...
+[2026-02-02 21:49:10] INFO:   Started: hyprpanel
+[2026-02-02 21:49:10] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:49:45] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:49:45] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:49:46] ERROR: Failed to stop some hyprpanel processes
+[2026-02-02 21:49:46] INFO:   Linked: hypr
+[2026-02-02 21:49:46] INFO:   Linked: kitty
+[2026-02-02 21:49:46] INFO:   Linked: eww
+[2026-02-02 21:49:46] INFO:   Linked: rofi
+[2026-02-02 21:49:46] INFO:   Linked: hyprpanel
+[2026-02-02 21:49:46] INFO: Reloading Hyprland...
+[2026-02-02 21:49:46] SUCCESS: Hyprland reloaded
+[2026-02-02 21:49:46] INFO: Starting components...
+[2026-02-02 21:49:47] INFO:   Started: hyprpanel
+[2026-02-02 21:49:48] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:50:55] INFO: Switching to profile: hyprdots
+[2026-02-02 21:50:55] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:50:55] INFO:   Killed process group for hyprpanel (PID: 17326)
+[2026-02-02 21:50:56] INFO:   Force killed remaining hyprpanel
+[2026-02-02 21:50:56] INFO:   Killed hyprpanel python scripts
+[2026-02-02 21:50:56] INFO:   All hyprpanel processes stopped
+[2026-02-02 21:50:56] INFO:   Linked: hypr
+[2026-02-02 21:50:56] INFO:   Linked: waybar
+[2026-02-02 21:50:56] INFO:   Linked: dunst
+[2026-02-02 21:50:56] INFO:   Linked: rofi
+[2026-02-02 21:50:56] INFO: Reloading Hyprland...
+[2026-02-02 21:50:56] SUCCESS: Hyprland reloaded
+[2026-02-02 21:50:56] INFO: Starting components...
+[2026-02-02 21:50:57] INFO:   Started: waybar
+[2026-02-02 21:50:57] INFO:   Started: dunst
+[2026-02-02 21:50:57] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 21:50:59] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:50:59] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:50:59] INFO:   All hyprpanel processes stopped
+[2026-02-02 21:50:59] INFO:   Linked: hypr
+[2026-02-02 21:50:59] INFO:   Linked: kitty
+[2026-02-02 21:50:59] INFO:   Linked: eww
+[2026-02-02 21:50:59] INFO:   Linked: rofi
+[2026-02-02 21:50:59] INFO:   Linked: hyprpanel
+[2026-02-02 21:50:59] INFO: Reloading Hyprland...
+[2026-02-02 21:50:59] SUCCESS: Hyprland reloaded
+[2026-02-02 21:50:59] INFO: Starting components...
+[2026-02-02 21:51:01] INFO:   Started: hyprpanel
+[2026-02-02 21:51:01] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:51:51] INFO: Switching to profile: hyprdots
+[2026-02-02 21:51:51] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:51:52] INFO:   All hyprpanel processes stopped
+[2026-02-02 21:51:52] INFO:   Linked: hypr
+[2026-02-02 21:51:52] INFO:   Linked: waybar
+[2026-02-02 21:51:52] INFO:   Linked: dunst
+[2026-02-02 21:51:52] INFO:   Linked: rofi
+[2026-02-02 21:51:52] INFO: Reloading Hyprland...
+[2026-02-02 21:51:52] SUCCESS: Hyprland reloaded
+[2026-02-02 21:51:52] INFO: Starting components...
+[2026-02-02 21:51:53] INFO:   Started: waybar
+[2026-02-02 21:51:53] INFO:   Started: dunst
+[2026-02-02 21:51:53] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 21:52:02] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:52:02] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:52:03] INFO:   All hyprpanel processes stopped
+[2026-02-02 21:52:03] INFO:   Linked: hypr
+[2026-02-02 21:52:03] INFO:   Linked: kitty
+[2026-02-02 21:52:03] INFO:   Linked: eww
+[2026-02-02 21:52:03] INFO:   Linked: rofi
+[2026-02-02 21:52:03] INFO:   Linked: hyprpanel
+[2026-02-02 21:52:03] INFO: Reloading Hyprland...
+[2026-02-02 21:52:03] SUCCESS: Hyprland reloaded
+[2026-02-02 21:52:03] INFO: Starting components...
+[2026-02-02 21:52:05] INFO:   Started: hyprpanel
+[2026-02-02 21:52:05] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:52:25] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:52:25] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:52:26] INFO:   All hyprpanel processes stopped
+[2026-02-02 21:52:26] INFO:   Linked: hypr
+[2026-02-02 21:52:26] INFO:   Linked: kitty
+[2026-02-02 21:52:26] INFO:   Linked: eww
+[2026-02-02 21:52:26] INFO:   Linked: rofi
+[2026-02-02 21:52:26] INFO:   Linked: hyprpanel
+[2026-02-02 21:52:26] INFO: Reloading Hyprland...
+[2026-02-02 21:52:26] SUCCESS: Hyprland reloaded
+[2026-02-02 21:52:26] INFO: Starting components...
+[2026-02-02 21:52:27] INFO:   Started: hyprpanel
+[2026-02-02 21:52:28] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:53:09] INFO: Switching to profile: hyprdots
+[2026-02-02 21:53:09] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:53:09] INFO:   Killed gjs processes
+[2026-02-02 21:53:09] INFO:   Killed Python script (PID: 20247)
+[2026-02-02 21:53:10] INFO:   All hyprpanel processes stopped
+[2026-02-02 21:53:10] INFO:   Linked: hypr
+[2026-02-02 21:53:10] INFO:   Linked: waybar
+[2026-02-02 21:53:10] INFO:   Linked: dunst
+[2026-02-02 21:53:10] INFO:   Linked: rofi
+[2026-02-02 21:53:10] INFO: Reloading Hyprland...
+[2026-02-02 21:53:10] SUCCESS: Hyprland reloaded
+[2026-02-02 21:53:10] INFO: Starting components...
+[2026-02-02 21:53:11] INFO:   Started: waybar
+[2026-02-02 21:53:11] INFO:   Started: dunst
+[2026-02-02 21:53:11] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 21:53:13] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:53:13] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:53:13] INFO:   All hyprpanel processes stopped
+[2026-02-02 21:53:13] INFO:   Linked: hypr
+[2026-02-02 21:53:13] INFO:   Linked: kitty
+[2026-02-02 21:53:13] INFO:   Linked: eww
+[2026-02-02 21:53:13] INFO:   Linked: rofi
+[2026-02-02 21:53:13] INFO:   Linked: hyprpanel
+[2026-02-02 21:53:13] INFO: Reloading Hyprland...
+[2026-02-02 21:53:13] SUCCESS: Hyprland reloaded
+[2026-02-02 21:53:13] INFO: Starting components...
+[2026-02-02 21:53:15] INFO:   Started: hyprpanel
+[2026-02-02 21:53:15] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:53:25] INFO: Switching to profile: hyprdots
+[2026-02-02 21:53:25] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:53:25] INFO:   Killed gjs processes
+[2026-02-02 21:53:25] INFO:   Killed Python script (PID: 21695)
+[2026-02-02 21:53:26] INFO:   All hyprpanel processes stopped
+[2026-02-02 21:53:26] INFO:   Linked: hypr
+[2026-02-02 21:53:26] INFO:   Linked: waybar
+[2026-02-02 21:53:26] INFO:   Linked: dunst
+[2026-02-02 21:53:26] INFO:   Linked: rofi
+[2026-02-02 21:53:26] INFO: Reloading Hyprland...
+[2026-02-02 21:53:26] SUCCESS: Hyprland reloaded
+[2026-02-02 21:53:26] INFO: Starting components...
+[2026-02-02 21:53:27] INFO:   Started: waybar
+[2026-02-02 21:53:27] INFO:   Started: dunst
+[2026-02-02 21:53:27] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 21:54:02] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:54:02] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:54:02] INFO:   All hyprpanel processes stopped
+[2026-02-02 21:54:02] INFO:   Linked: hypr
+[2026-02-02 21:54:02] INFO:   Linked: kitty
+[2026-02-02 21:54:02] INFO:   Linked: eww
+[2026-02-02 21:54:02] INFO:   Linked: rofi
+[2026-02-02 21:54:02] INFO:   Linked: hyprpanel
+[2026-02-02 21:54:02] INFO: Reloading Hyprland...
+[2026-02-02 21:54:02] SUCCESS: Hyprland reloaded
+[2026-02-02 21:54:02] INFO: Starting components...
+[2026-02-02 21:54:04] INFO:   Started: hyprpanel
+[2026-02-02 21:54:04] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 21:55:00] INFO: Switching to profile: hyprdots
+[2026-02-02 21:55:00] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:55:00] INFO:   Killed gjs processes
+[2026-02-02 21:55:00] INFO:   Killed Python script (PID: 22963)
+[2026-02-02 21:55:01] INFO:   All hyprpanel processes stopped
+[2026-02-02 21:55:01] INFO:   Linked: hypr
+[2026-02-02 21:55:01] INFO:   Linked: waybar
+[2026-02-02 21:55:01] INFO:   Linked: dunst
+[2026-02-02 21:55:01] INFO:   Linked: rofi
+[2026-02-02 21:55:01] INFO: Reloading Hyprland...
+[2026-02-02 21:55:01] SUCCESS: Hyprland reloaded
+[2026-02-02 21:55:01] INFO: Starting components...
+[2026-02-02 21:55:02] INFO:   Started: waybar
+[2026-02-02 21:55:02] INFO:   Started: dunst
+[2026-02-02 21:55:02] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 21:58:16] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 21:58:16] INFO: Stopping hyprpanel processes...
+[2026-02-02 21:58:17] INFO:   All hyprpanel processes stopped
+[2026-02-02 21:58:17] INFO:   Linked: hypr
+[2026-02-02 21:58:17] INFO:   Linked: kitty
+[2026-02-02 21:58:17] INFO:   Linked: eww
+[2026-02-02 21:58:17] INFO:   Linked: rofi
+[2026-02-02 21:58:17] INFO:   Linked: hyprpanel
+[2026-02-02 21:58:17] INFO: Reloading Hyprland...
+[2026-02-02 21:58:17] SUCCESS: Hyprland reloaded
+[2026-02-02 21:58:17] INFO: Starting components...
+[2026-02-02 21:58:18] INFO:   Started: hyprpanel
+[2026-02-02 21:58:19] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 22:12:58] INFO: Switching to profile: hyprdots
+[2026-02-02 22:12:58] INFO: Stopping hyprpanel processes...
+[2026-02-02 22:12:59] INFO:   All hyprpanel processes stopped
+[2026-02-02 22:12:59] INFO:   Linked: hypr
+[2026-02-02 22:12:59] INFO:   Linked: waybar
+[2026-02-02 22:12:59] INFO:   Linked: dunst
+[2026-02-02 22:12:59] INFO:   Linked: rofi
+[2026-02-02 22:12:59] INFO: Reloading Hyprland...
+[2026-02-02 22:12:59] INFO: Starting components...
+[2026-02-02 22:13:00] INFO:   Started: waybar
+[2026-02-02 22:13:00] INFO:   Started: dunst
+[2026-02-02 22:13:00] SUCCESS: Profile 'hyprdots' activated
+[2026-02-02 22:16:07] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 22:16:07] INFO: Stopping hyprpanel processes...
+[2026-02-02 22:16:07] INFO:   All hyprpanel processes stopped
+[2026-02-02 22:39:32] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 22:39:32] INFO: Stopping hyprpanel processes...
+[2026-02-02 22:39:32] INFO:   All hyprpanel processes stopped
+[2026-02-02 22:41:13] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 22:41:14] INFO: Stopping hyprpanel processes...
+[2026-02-02 22:41:14] INFO:   All hyprpanel processes stopped
+[2026-02-02 22:44:23] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 22:44:23] INFO: Stopping hyprpanel processes...
+[2026-02-02 22:44:23] INFO:   All hyprpanel processes stopped
+[2026-02-02 22:44:23] INFO:   Linked: hypr
+[2026-02-02 22:44:23] INFO:   Linked: kitty
+[2026-02-02 22:44:23] INFO:   Linked: eww
+[2026-02-02 22:44:23] INFO:   Linked: rofi
+[2026-02-02 22:44:23] INFO: Reloading Hyprland...
+[2026-02-02 22:44:23] SUCCESS: Hyprland reloaded
+[2026-02-02 22:44:23] INFO: Starting components...
+[2026-02-02 22:44:25] INFO:   Started: eww
+[2026-02-02 22:44:25] SUCCESS: Profile 'MyPerfectRice' activated
+[2026-02-02 22:50:38] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 22:50:38] INFO: Stopping hyprpanel processes...
+[2026-02-02 22:50:39] INFO:   All hyprpanel processes stopped
+[2026-02-02 22:51:35] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 22:51:35] INFO: Stopping hyprpanel processes...
+[2026-02-02 22:51:36] INFO:   All hyprpanel processes stopped
+[2026-02-02 22:52:26] INFO: Switching to profile: MyPerfectRice
+[2026-02-02 22:52:26] INFO: Stopping hyprpanel processes...
+[2026-02-02 22:52:26] INFO:   All hyprpanel processes stopped

@@ -1,0 +1,155 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    display-drun: "Apps";
+    display-run: "Exec";
+    display-window: "Window";
+    drun-display-format: "{name}";
+    
+    // Шрифт
+    font: "JetBrainsMono Nerd Font 10";
+    
+    // Настройки поиска
+    matching: "fuzzy";
+    sorting-method: "fzf";
+}
+
+// Catppuccin Mocha Theme
+@theme "catppuccin"
+
+* {
+    // Основные цвета
+    background-color:     #1E1E2E;
+    background:           #1E1E2E;
+    foreground:           #CDD6F4;
+    selected:             #89B4FA;
+    active:               #A6ADC8;
+    urgent:               #F38BA8;
+    
+    // Альтернативный синтаксис для цветов
+    bg:                   #1E1E2E;
+    bg-alt:               #181825;
+    fg:                   #CDD6F4;
+    fg-alt:               #A6ADC8;
+    
+    // Цвета для конкретных элементов
+    blue:                 #89B4FA;
+    lavender:             #B4BEFE;
+    red:                  #F38BA8;
+    border-color:         #11111B;
+}
+
+window {
+    // Исправлено: transparency не является валидным свойством
+    // Вместо этого используем opacity
+    opacity:              95;
+    location:             center;
+    anchor:               center;
+    fullscreen:           false;
+    width:                500px;
+    x-offset:             0;
+    y-offset:             0;
+
+    enabled:              true;
+    border-radius:        10px;
+    // Исправлено: cursor должен быть числом или именем
+    cursor:               0;
+    background-color:     @background;
+    border:               1px;
+    border-color:         @border-color;
+}
+
+mainbox {
+    enabled:              true;
+    spacing:              10px;
+    background-color:     transparent;
+    orientation:          vertical;
+    children:             [ "inputbar", "listbox" ];
+}
+
+inputbar {
+    enabled:              true;
+    spacing:              10px;
+    padding:              10px;
+    background-color:     @bg-alt;
+    text-color:           @foreground;
+    children:             [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    enabled:              true;
+    expand:               false;
+    str:                  " ";
+    background-color:     inherit;
+    text-color:           inherit;
+}
+
+entry {
+    enabled:              true;
+    background-color:     inherit;
+    text-color:           inherit;
+    cursor:               text;
+    placeholder:          "Search...";
+    placeholder-color:    @fg-alt;
+}
+
+listbox {
+    spacing:              10px;
+    padding:              10px;
+    background-color:     transparent;
+    orientation:          vertical;
+    children:             [ "listview" ];
+}
+
+listview {
+    enabled:              true;
+    columns:              1;
+    lines:                8;
+    cycle:                true;
+    dynamic:              true;
+    scrollbar:            false;
+    layout:               vertical;
+    reverse:              false;
+    // Исправлено: убраны некорректные свойства
+    // fixed-height:      true;
+    // fixed-columns:     true;
+    
+    spacing:              5px;
+    background-color:     transparent;
+    text-color:           @foreground;
+    cursor:               "default";
+}
+
+element {
+    enabled:              true;
+    spacing:              10px;
+    padding:              5px;
+    background-color:     transparent;
+    text-color:           @foreground;
+    cursor:               pointer;
+}
+
+element normal.normal {
+    background-color:     transparent;
+    text-color:           @foreground;
+}
+
+element selected.normal {
+    background-color:     @blue;
+    text-color:           @background;
+}
+
+element-icon {
+    background-color:     transparent;
+    text-color:           inherit;
+    size:                 24px;
+    cursor:               inherit;
+}
+
+element-text {
+    background-color:     transparent;
+    text-color:           inherit;
+    cursor:               inherit;
+    vertical-align:       0.5;
+    horizontal-align:     0.0;
+}

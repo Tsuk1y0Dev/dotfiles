@@ -30,10 +30,9 @@ export LC_ALL=en_US.UTF-8
 
 # ===== АЛИАСЫ (СОКРАЩЕНИЯ) =====
 # Rice Management
-alias rs='rice-boss switch'    # Выбрать райс из списка (fzf)
-alias r-save='rice-boss save'  # Сохранить текущий сет в новый профиль
-alias r-list='rice-boss list'  # Список всех райсов
-
+alias rswitch='rice-boss switch'    # Выбрать райс из списка (fzf)
+alias rcreate='rice-boss create'
+alias rwatch='rice-boss watch'
 # Rice Management
 alias rs='rice-boss switch'    # Выбрать райс из списка (fzf)
 alias r-save='rice-boss save'  # Сохранить текущий сет в новый профиль
@@ -190,3 +189,4 @@ export PATH="$HOME/bin:$PATH"
 
 # ===== СИНТАКСИЧЕСКАЯ ПРОВЕРКА =====
 # Если нужно проверить конфиг: zsh -n ~/.zshrc
+export PATH="$HOME/.local/bin:$PATH"

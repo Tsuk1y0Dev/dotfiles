@@ -1,0 +1,482 @@
+#!/usr/bin/env bash
+# ============================================================================
+# Rice Manager - Complete Configuration Management System
+# ============================================================================
+
+set -e
+
+SCRIPT_NAME="rice-manager"
+SCRIPT_DIR="$HOME/.config/rice-manager"
+PROFILES_DIR="$SCRIPT_DIR/profiles"
+BACKUP_DIR="$SCRIPT_DIR/backups"
+LOG_FILE="$SCRIPT_DIR/rice.log"
+LOCK_FILE="/tmp/rice-manager.lock"
+
+# ============================================================================
+# INITIALIZATION
+# ============================================================================
+
+init() {
+  mkdir -p "$SCRIPT_DIR" "$PROFILES_DIR" "$BACKUP_DIR"
+}
+
+log() {
+  echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >>"$LOG_FILE"
+  echo "$1"
+}
+
+error() {
+  echo "ERROR: $1" >&2
+  log "ERROR: $1"
+}
+
+success() {
+  echo "SUCCESS: $1"
+  log "SUCCESS: $1"
+}
+
+info() {
+  echo "INFO: $1"
+  log "INFO: $1"
+}
+
+acquire_lock() {
+  if [ -f "$LOCK_FILE" ]; then
+    error "Script already running"
+    exit 1
+  fi
+  echo $$ >"$LOCK_FILE"
+  trap 'rm -f "$LOCK_FILE"' EXIT
+}
+
+# ============================================================================
+# PROFILE MANAGEMENT
+# ============================================================================
+
+list_profiles() {
+  if [ ! -d "$PROFILES_DIR" ] || [ -z "$(ls -A "$PROFILES_DIR" 2>/dev/null)" ]; then
+    echo "No profiles found"
+    return 1
+  fi
+
+  ls -1 "$PROFILES_DIR"
+}
+
+select_profile_interactive() {
+  local profiles
+  mapfile -t profiles < <(list_profiles)
+
+  if [ ${#profiles[@]} -eq 0 ]; then
+    error "No profiles available"
+    return 1
+  fi
+
+  if command -v fzf >/dev/null 2>&1; then
+    printf "%s\n" "${profiles[@]}" | fzf --height 40% --header "Select Profile"
+  elif command -v rofi >/dev/null 2>&1; then
+    printf "%s\n" "${profiles[@]}" | rofi -dmenu -p "Select profile"
+  else
+    echo "Available profiles:"
+    select profile in "${profiles[@]}" "Cancel"; do
+      [ "$profile" = "Cancel" ] && return 1
+      [ -n "$profile" ] && echo "$profile" && return
+    done
+  fi
+}
+
+# ============================================================================
+# MAIN COMMANDS
+# ============================================================================
+
+stop_hyprpanel() {
+  info "Stopping hyprpanel processes..."
+
+  # Используем killall для hyprpanel и gjs
+  if command -v killall >/dev/null 2>&1; then
+    killall hyprpanel 2>/dev/null && info "  Killed hyprpanel"
+    killall gjs 2>/dev/null && info "  Killed gjs processes"
+  else
+    pkill hyprpanel 2>/dev/null && info "  Killed hyprpanel"
+    pkill gjs 2>/dev/null && info "  Killed gjs processes"
+  fi
+
+  # Убиваем Python скрипты hyprpanel
+  for pid in $(pgrep -f "python.*hyprpanel" 2>/dev/null || true); do
+    kill -9 "$pid" 2>/dev/null && info "  Killed Python script (PID: $pid)"
+  done
+
+  # Принудительно убиваем оставшиеся
+  sleep 0.3
+  pkill -9 hyprpanel 2>/dev/null || true
+  pkill -9 gjs 2>/dev/null || true
+  pkill -9 -f "python.*hyprpanel" 2>/dev/null || true
+
+  # Проверяем
+  if pgrep -f "hyprpanel" >/dev/null 2>&1; then
+    error "Hyprpanel processes still running:"
+    pgrep -fa "hyprpanel" 2>/dev/null || true
+    return 1
+  fi
+
+  info "  All hyprpanel processes stopped"
+  return 0
+}
+
+cmd_switch() {
+  local profile_name="$1"
+
+  if [ -z "$profile_name" ]; then
+    profile_name=$(select_profile_interactive)
+    [ -z "$profile_name" ] && return 1
+  fi
+
+  local profile_dir="$PROFILES_DIR/$profile_name"
+
+  if [ ! -d "$profile_dir" ]; then
+    error "Profile '$profile_name' not found"
+    return 1
+  fi
+
+  info "Switching to profile: $profile_name"
+
+  # Stop processes
+  pkill -9 eww 2>/dev/null || true
+  pkill waybar 2>/dev/null || true
+  pkill dunst 2>/dev/null || true
+  pkill quickshell 2>/dev/null || true
+  pkill swww 2>/dev/null || true
+  pkill qs 2>/dev/null || true
+
+  # Останавливаем hyprpanel (который может быть запущен как gjs)
+  stop_hyprpanel
+
+  # Remove old symlinks
+  for app in hypr kitty eww waybar dunst quickshell rofi swww hyprpanel; do
+    rm -f "$HOME/.config/$app"
+  done
+
+  # Create new symlinks
+  for app in hypr kitty eww waybar dunst quickshell rofi swww hyprpanel; do
+    if [ -d "$profile_dir/$app" ]; then
+      ln -sf "$profile_dir/$app" "$HOME/.config/$app"
+      info "  Linked: $app"
+    fi
+  done
+
+  # Reload Hyprland
+  if command -v hyprctl >/dev/null 2>&1; then
+    info "Reloading Hyprland..."
+    hyprctl reload 2>/dev/null && success "Hyprland reloaded"
+  fi
+
+  # Start components
+  info "Starting components..."
+  sleep 1
+
+  # Запускаем eww
+  if [ -L "$HOME/.config/eww" ] && [ -f "$HOME/.config/eww/eww.yuck" ]; then
+    eww daemon >/dev/null 2>&1 &
+    sleep 0.5
+    eww open bar >/dev/null 2>&1 && info "  Started: eww"
+  fi
+
+  # Запускаем waybar (с проверкой разных форматов конфигов)
+  if [ -L "$HOME/.config/waybar" ]; then
+    # Ищем конфиг в разных форматах
+    local waybar_configs=("config" "config.json" "config.jsonc" "style.css")
+    local config_found=false
+
+    for config in "${waybar_configs[@]}"; do
+      if [ -f "$HOME/.config/waybar/$config" ]; then
+        config_found=true
+        break
+      fi
+    done
+
+    if [ "$config_found" = true ]; then
+      waybar >/dev/null 2>&1 &
+      info "  Started: waybar"
+    else
+      info "  Waybar config not found"
+    fi
+  fi
+
+  if [ -L "$HOME/.config/dunst" ] && command -v dunst >/dev/null 2>&1; then
+    dunst >/dev/null 2>&1 &
+    info "  Started: dunst"
+  fi
+
+  if [ -L "$HOME/.config/quickshell" ] && command -v quickshell >/dev/null 2>&1; then
+    qs_conf=$(find "$HOME/.config/quickshell" -name "*.qml" -type f 2>/dev/null | head -1)
+    if [ -n "$qs_conf" ]; then
+      quickshell --path "$qs_conf" >/dev/null 2>&1 &
+      info "  Started: quickshell"
+    fi
+  fi
+
+  # Start hyprpanel если он есть в профиле
+  if [ -L "$HOME/.config/hyprpanel" ] && [ -d "$HOME/.config/hyprpanel" ]; then
+    # Проверяем наличие AGS
+    if [ -L "$HOME/.config/ags" ]; then
+      info "  Skipping hyprpanel (AGS is active)"
+    else
+      # Проверяем наличие конфигурационных файлов hyprpanel
+      local hyprpanel_configs=("config.json" "modules.json" "config.toml" "config.ini")
+      local hp_config_found=false
+
+      for config in "${hyprpanel_configs[@]}"; do
+        if [ -f "$HOME/.config/hyprpanel/$config" ]; then
+          hp_config_found=true
+          break
+        fi
+      done
+
+      if [ "$hp_config_found" = true ] && command -v hyprpanel >/dev/null 2>&1; then
+        # Запускаем hyprpanel в фоне
+        hyprpanel >/dev/null 2>&1 &
+        info "  Started: hyprpanel"
+        sleep 0.5
+      else
+        info "  Hyprpanel not found or no config"
+      fi
+    fi
+  fi
+
+  success "Profile '$profile_name' activated"
+}
+
+cmd_create() {
+  local profile_name="$1"
+
+  if [ -z "$profile_name" ]; then
+    read -rp "Enter new profile name: " profile_name
+    [ -z "$profile_name" ] && {
+      error "No name provided"
+      return 1
+    }
+  fi
+
+  if [[ ! "$profile_name" =~ ^[a-zA-Z0-9_-]+$ ]]; then
+    error "Invalid name. Use only letters, numbers, hyphens, and underscores"
+    return 1
+  fi
+
+  local profile_dir="$PROFILES_DIR/$profile_name"
+
+  if [ -d "$profile_dir" ]; then
+    error "Profile '$profile_name' already exists"
+    return 1
+  fi
+
+  info "Creating profile: $profile_name"
+  mkdir -p "$profile_dir"
+
+  # Create basic structure
+  for app in hypr kitty eww waybar dunst quickshell hyprpanel; do
+    mkdir -p "$profile_dir/$app"
+  done
+
+  # Basic Hyprland config
+  cat >"$profile_dir/hypr/hyprland.conf" <<'END'
+monitor=,highrr,auto,1
+
+input {
+    kb_layout = us,ru
+    kb_options = grp:alt_shift_toggle
+}
+
+general {
+    gaps_in = 5
+    gaps_out = 10
+    border_size = 2
+    col.active_border = rgba(ffffffaa)
+}
+
+bind = SUPER, Q, exec, kitty
+bind = SUPER, C, killactive,
+bind = SUPER, M, exit,
+bind = SUPER, R, exec, rofi -show drun
+END
+
+  # Basic hyprpanel config
+  cat >"$profile_dir/hyprpanel/config.json" <<'END'
+{
+  "general": {
+    "panel_height": 36,
+    "position": "top",
+    "monitor": "all"
+  },
+  "modules": {
+    "left": ["workspaces"],
+    "center": ["clock"],
+    "right": ["tray", "system"]
+  }
+}
+END
+
+  success "Profile '$profile_name' created"
+}
+
+cmd_list() {
+  echo "Available profiles:"
+  echo "=================="
+
+  if ! list_profiles; then
+    echo "No profiles. Create one with: rice-manager create NAME"
+  fi
+}
+
+cmd_backup() {
+  local timestamp
+  timestamp=$(date '+%Y%m%d_%H%M%S')
+  local backup_path="$BACKUP_DIR/backup_$timestamp"
+
+  info "Creating backup..."
+  mkdir -p "$backup_path"
+
+  for app in hypr kitty eww waybar dunst quickshell hyprpanel; do
+    if [ -d "$HOME/.config/$app" ]; then
+      cp -r "$HOME/.config/$app" "$backup_path/" 2>/dev/null || true
+    fi
+  done
+
+  success "Backup created: $(basename "$backup_path")"
+}
+
+cmd_export() {
+  local profile_name="$1"
+
+  if [ -z "$profile_name" ]; then
+    profile_name=$(select_profile_interactive)
+    [ -z "$profile_name" ] && return 1
+  fi
+
+  local profile_dir="$PROFILES_DIR/$profile_name"
+  local export_dir="./${profile_name}_$(date +%Y%m%d)"
+
+  if [ ! -d "$profile_dir" ]; then
+    error "Profile not found"
+    return 1
+  fi
+
+  info "Exporting profile '$profile_name'..."
+  cp -r "$profile_dir" "$export_dir"
+
+  success "Profile exported to: $export_dir"
+}
+
+cmd_watch() {
+  info "Starting watcher (Ctrl+C to stop)..."
+
+  local watch_dirs=""
+  for app in hypr eww waybar quickshell hyprpanel; do
+    [ -d "$HOME/.config/$app" ] && watch_dirs="$watch_dirs $HOME/.config/$app"
+  done
+
+  if [ -z "$watch_dirs" ]; then
+    error "No directories to watch"
+    return 1
+  fi
+
+  while inotifywait -r -e modify,create,delete $watch_dirs; do
+    echo
+    info "Changes detected!"
+
+    if command -v hyprctl >/dev/null 2>&1; then
+      hyprctl reload && info "  Hyprland reloaded"
+    fi
+
+    if pgrep eww >/dev/null; then
+      eww reload && info "  EWW reloaded"
+    fi
+  done
+}
+
+cmd_doctor() {
+  echo "=== System Check ==="
+  echo
+  echo "Directories:"
+  [ -d "$SCRIPT_DIR" ] && echo "✓ $SCRIPT_DIR" || echo "✗ $SCRIPT_DIR"
+  [ -d "$PROFILES_DIR" ] && echo "✓ $PROFILES_DIR" || echo "✗ $PROFILES_DIR"
+  echo
+  echo "Dependencies:"
+  for cmd in hyprctl hyprpanel; do
+    if command -v "$cmd" >/dev/null 2>&1; then
+      echo "✓ $cmd"
+    else
+      echo "✗ $cmd"
+    fi
+  done
+  echo
+  echo "Running processes:"
+  if pgrep -f "gjs.*hyprpanel" >/dev/null; then
+    echo "✓ hyprpanel (running as gjs)"
+    pgrep -fa "gjs.*hyprpanel" 2>/dev/null
+  elif pgrep hyprpanel >/dev/null; then
+    echo "✓ hyprpanel"
+    pgrep -fa hyprpanel 2>/dev/null
+  else
+    echo "✗ hyprpanel"
+  fi
+  echo
+  echo "Current symlinks:"
+  for app in hypr kitty eww waybar dunst quickshell hyprpanel; do
+    if [ -L "$HOME/.config/$app" ]; then
+      echo "  $app → $(readlink "$HOME/.config/$app")"
+    fi
+  done
+}
+
+# ============================================================================
+# MAIN
+# ============================================================================
+
+show_help() {
+  cat <<'END'
+Rice Manager - Configuration Management System
+
+Usage: rice-manager [COMMAND] [ARGUMENTS]
+
+Commands:
+  switch [NAME]    Switch to profile (interactive if no name)
+  create [NAME]    Create new profile
+  list             List all profiles
+  backup           Backup current configuration
+  export [NAME]    Export profile
+  watch            Watch for configuration changes
+  doctor           System diagnostics
+  help             Show this help
+
+Examples:
+  rice-manager switch
+  rice-manager create gaming
+  rice-manager list
+END
+}
+
+main() {
+  init
+  acquire_lock
+
+  local command="${1:-help}"
+
+  case "$command" in
+  switch) cmd_switch "$2" ;;
+  create) cmd_create "$2" ;;
+  list) cmd_list ;;
+  backup) cmd_backup ;;
+  export) cmd_export "$2" ;;
+  watch) cmd_watch ;;
+  doctor) cmd_doctor ;;
+  help | --help | -h) show_help ;;
+  *)
+    error "Unknown command: $command"
+    show_help
+    exit 1
+    ;;
+  esac
+}
+
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+  main "$@"
+fi

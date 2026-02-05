@@ -2,8 +2,8 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "type": "kitty",
-    "source": "/home/tsuk1y0/Media/Images/logos/_.jpeg", // https://en.wikipedia.org/wiki/Linux#/media/File:Tux.svg
-    "width": 30,
+    "source": "/home/tsuk1y0/Media/Images/logos/arch-chan.jpeg", // https://en.wikipedia.org/wiki/Linux#/media/File:Tux.svg
+    "width": 37,
     "height": 17,
     "padding": {
       "top": 1,
@@ -130,6 +130,6 @@
       "type": "custom",
       "format": "\u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m  \u001b[38m  \u001b[39m  \u001b[39m    \u001b[38m  \u001b[37m  \u001b[36m  \u001b[35m  \u001b[34m  \u001b[33m  \u001b[32m  \u001b[31m  \u001b[90m "
     },
-    "break",
+    "break"
   ]
 }

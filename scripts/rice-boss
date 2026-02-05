@@ -1,49 +1,82 @@
 #!/bin/bash
+
 PROFILES_DIR="$HOME/Rice/Profiles"
-APPS=("hypr" "waybar" "rofi" "dunst" "kitty" "quickshell")
+# Добавили eww в список приложений
+APPS=("hypr" "waybar" "rofi" "dunst" "kitty" "quickshell" "eww")
 
 case $1 in
+"create")
+  read -p "Имя нового Rice-проекта: " NEW_NAME
+  TARGET="$PROFILES_DIR/$NEW_NAME"
+  mkdir -p "$TARGET"/{hypr,kitty,eww}
+
+  # Hyprland: Чистый конфиг с базовыми биндами
+  cat <<EOF >"$TARGET/hypr/hyprland.conf"
+monitor=,highrr,auto,1
+
+input {
+    kb_layout = us,ru
+    kb_options = grp:alt_shift_toggle
+}
+
+general {
+    gaps_in = 5
+    gaps_out = 10
+    border_size = 2
+    col.active_border = rgba(ffffffaa)
+}
+
+bind = SUPER, Q, exec, kitty
+bind = SUPER, C, killactive,
+bind = SUPER, M, exit,
+bind = SUPER, R, exec, rofi -show drun
+EOF
+
+  # Eww: Заготовки файлов
+  echo '(defwindow bar :monitor 0 :geometry (geometry :x "0%" :y "0%" :width "100%" :height "30px" :anchor "top center") "Hello Eww")' >"$TARGET/eww/eww.yuck"
+  echo 'window { background-color: rgba(0,0,0,0.5); color: white; }' >"$TARGET/eww/eww.scss"
+
+  echo "Профиль '$NEW_NAME' готов. Структура создана в $TARGET"
+  ;;
+
 "switch")
   PROFILE=$(ls "$PROFILES_DIR" | fzf --height 40% --header "Select Rice")
   [ -z "$PROFILE" ] && exit 0
   SELECTED="$PROFILES_DIR/$PROFILE"
 
-  # 1. Тотальная зачистка перед переключением
-  pkill -9 quickshell
-  pkill -9 waybar
-  pkill -9 dunst
-  pkill -9 rofi
-  pkill -9 qs
-  pkill -9 swww
+  # Зачистка процессов
+  pkill -9 quickshell waybar dunst rofi swww eww qs 2>/dev/null
 
-  # 2. Пересоздаем ссылки на приложения
+  # Пересоздание ссылок
   for APP in "${APPS[@]}"; do
     rm -rf "$HOME/.config/$APP"
-    if [ -d "$SELECTED/$APP" ]; then
-      ln -s "$SELECTED/$APP" "$HOME/.config/$APP"
-      echo "Linked $APP"
-    fi
+    [ -d "$SELECTED/$APP" ] && ln -s "$SELECTED/$APP" "$HOME/.config/$APP"
   done
 
-  # 3. Перезапуск Hyprland
+  # Применяем конфиг Hyprland
   hyprctl reload
 
-  # 4. Умный запуск интерфейса
-  if [ -d "$HOME/.config/quickshell" ]; then
-    echo "Starting Quickshell (Illogical Impulse)..."
+  # Логика запуска оболочки
+  if [ -f "$HOME/.config/quickshell/ii/shell.qml" ]; then
     quickshell --path "$HOME/.config/quickshell/ii/shell.qml" >/dev/null 2>&1 &
-  elif [ -d "$HOME/.config/waybar" ]; then
-    echo "Starting Waybar (Generic Rice)..."
-    waybar >/dev/null 2>&1 &
+  elif [ -f "$HOME/.config/eww/eww.yuck" ]; then
+    eww daemon && eww open bar >/dev/null 2>&1 &
   fi
   ;;
 
-"save")
-  [ -z "$2" ] && exit 1
-  DEST="$PROFILES_DIR/$2"
-  mkdir -p "$DEST"
-  for APP in "${APPS[@]}"; do
-    [ -d "$HOME/.config/$APP" ] && cp -rL "$HOME/.config/$APP" "$DEST/"
+"watch")
+  echo "Запущено отслеживание изменений в ~/.config/..."
+  # Следим за hypr и eww
+  while inotifywait -r -e modify "$HOME/.config/hypr" "$HOME/.config/eww"; do
+    echo "Изменения обнаружены, перезагрузка..."
+    hyprctl reload
+    if pgrep -x "eww" >/dev/null; then
+      eww reload
+    fi
   done
+  ;;
+
+*)
+  echo "Usage: $0 {switch|create|watch}"
   ;;
 esac
