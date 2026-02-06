@@ -1,5 +1,54 @@
 {
-  "bar.customModules.storage.paths": [
-    "/"
-  ]
+  "theme.bar.floating": true,
+  "theme.bar.height": "2.1rem",
+  "theme.bar.margin_top": "0.5rem",
+  "theme.bar.margin_left": "0.7rem",
+  "theme.bar.margin_right": "0.7rem",
+  "theme.bar.border_radius": "0.7rem",
+  "theme.bar.border_width": "1px",
+  "theme.bar.opacity": 70,
+  "theme.bar.buttons.style": "split",
+  "theme.bar.buttons.spacing": "0.25em",
+  "theme.bar.buttons.x_margins": "0.3em",
+  "theme.bar.buttons.y_margins": "0.1em",
+  "theme.bar.buttons.radius": "0.5rem",
+  "theme.bar.outer_spacing": "0.4em",
+  "theme.font.name": "JetBrainsMono Nerd Font",
+  "theme.font.size": "10pt",
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle",
+        "kbinput"
+      ],
+      "middle": [
+        "media",
+        "systray"
+      ],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "battery",
+        "notifications",
+        "clock"
+      ]
+    }
+  },
+  "bar.workspaces.style": "duo",
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.spacing": 6,
+  "bar.media.show_text": true,
+  "bar.media.truncation_size": 25,
+  "bar.notifications.show_total": true,
+  "menus.clock.weather.key": "f86441f3558f4cfaab275623260602",
+  "menus.clock.weather.location": "Chita, RU",
+  "menus.clock.weather.unit": "metric",
+  "theme.matugen": false,
+  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.monitorSpecific": true,
+  "bar.workspaces.ignored": "-99",
+  "bar.notifications.hideCountWhenZero": true
 }

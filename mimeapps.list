@@ -7,3 +7,4 @@ x-scheme-handler/tonsite=userapp-AyuGram Desktop-RM6VJ3.desktop
 [Added Associations]
 x-scheme-handler/tg=userapp-AyuGram Desktop-R26UJ3.desktop;
 x-scheme-handler/tonsite=userapp-AyuGram Desktop-RM6VJ3.desktop;
+image/png=org.gnome.gThumb.desktop;
