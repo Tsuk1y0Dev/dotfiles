@@ -10,7 +10,7 @@ hl.on("hyprland.start", function()
 
         if should_run and app.cmd then
             local final_cmd = app.cmd .. " &"
-            
+
             if app.delay and app.delay > 0 then
                 final_cmd = string.format("sleep %d && %s &", app.delay, app.cmd)
             end
