@@ -1,8 +1,3 @@
----
-layout: default
-title: Tsuk1y0Dev's Dotfiles
----
-
 <style>
   html { 
     filter: invert(1) hue-rotate(180deg); 
