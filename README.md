@@ -33,7 +33,7 @@ Clone the repository and run the automated installation script. Do not run it as
 
 ```bash
 mkdir -p ~/System
-git clone https://github.com ~/System/dotfiles
+git clone https://github.com/Tsuk1y0Dev/dotfiles.git ~/System/dotfiles
 cd ~/System/dotfiles
 chmod +x install.sh
 ./install.sh
