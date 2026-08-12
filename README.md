@@ -2,6 +2,7 @@
 
 Minimalist Hyprland environment managed with GNU Stow. Configuration is driven by the Lua-based Hyprland ecosystem.
 
+
 ## Structure
 
 ```text
@@ -13,13 +14,23 @@ dotfiles/
             └── conf_d/       # Modular Lua configurations
 ```
 
-## Prerequisites
+## System Dependencies
 
-Ensure the following packages are installed on your system:
+Ensure the following packages are installed on your system for the configurations and keybinds to function correctly:
 
-* `hyprland` (with Lua integration support)
+* `hyprland` (with Lua support)
 * `stow` (GNU Stow)
 * `git`
+
+### Required Core Utilities
+* `swaync` (Notification daemon & client)
+* `rofi` (Application launcher)
+* `awww` (Wallpaper daemon)
+* `grimblast` (Screenshots)
+* `hyprlock` (Screen locker)
+* `brightnessctl` (Backlight control)
+* `wireplumber` (`wpctl` for audio management)
+* `playerctl` (Media keys control)
 
 ## Installation
 
@@ -40,10 +51,12 @@ Ensure the following packages are installed on your system:
    stow --target=\$HOME hypr
    ```
 
-## Configuration Notes
+## ⚠️ Disclaimer & Customization
 
-The Hyprland setup is completely modularized inside `hypr/.config/hypr/conf_d/`. 
-Modify variables, keybinds, and window rules in their respective Lua modules. Stow handles the symlinks dynamically, so any changes made locally inside `~/.config/hypr` are automatically tracked within this repository.
+This configuration is tailored for personal use. Before launching, review and modify the following files to match your system setup:
+
+* **Autostart (`hypr/.config/hypr/conf_d/_20-autostart.lua`)**: Contains user-specific applications (Carla paths, Spotify, chat clients). Update or comment them out.
+* **Keybinds (`hypr/.config/hypr/conf_d/_50-keybinds.lua`)**: Verify your preferred terminal, file manager, and check the target path for `hyprlock --config` (default points to `~/.config/hyprlock/Hyprlock-Styles/...`).
 
 ## License
 
