@@ -1,0 +1,11 @@
+# Hyprland logs ignore
+**/hyprland.log
+**/hyprlandCrashReport*
+
+# System cache
+.cache/
+*.tmp
+
+#Secrets
+*secret*
+
