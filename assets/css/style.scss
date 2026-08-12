@@ -1,0 +1,21 @@
+---
+---
+@import "{{ site.theme }}";
+
+/* Полная инверсия цвета сайта (белый становится черным) */
+html { 
+  filter: invert(1) hue-rotate(180deg); 
+  background-color: #fff !important; 
+}
+
+/* Картинки и скриншоты инвертируем обратно, сохраняя родной цвет */
+img, svg, video { 
+  filter: invert(1) hue-rotate(180deg); 
+}
+
+/* Расширяем правую часть и сужаем левый сайдбар */
+@media screen and (min-width: 64em) {
+  header { width: 220px !important; }
+  section { width: calc(100% - 280px) !important; max-width: 950px !important; margin-left: 260px !important; }
+}
+

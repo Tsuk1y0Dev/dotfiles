@@ -1,18 +1,18 @@
-<style>
-  html { 
-    filter: invert(1) hue-rotate(180deg); 
-    background-color: #fff !important; 
-  }
-  
-  img, svg, video { 
-    filter: invert(1) hue-rotate(180deg); 
-  }
-
-  @media screen and (min-width: 64em) {
-    header { width: 200px !important; }
-    section { width: calc(100% - 260px) !important; max-width: 900px !important; margin-left: 240px !important; }
-  }
-</style>
+<!-- <style> -->
+<!--   html {  -->
+<!--     filter: invert(1) hue-rotate(180deg);  -->
+<!--     background-color: #fff !important;  -->
+<!--   } -->
+<!---->
+<!--   img, svg, video {  -->
+<!--     filter: invert(1) hue-rotate(180deg);  -->
+<!--   } -->
+<!---->
+<!--   @media screen and (min-width: 64em) { -->
+<!--     header { width: 200px !important; } -->
+<!--     section { width: calc(100% - 260px) !important; max-width: 900px !important; margin-left: 240px !important; } -->
+<!--   } -->
+<!-- </style> -->
 
 # Tsuk1y0Dev's Dotfiles
 
