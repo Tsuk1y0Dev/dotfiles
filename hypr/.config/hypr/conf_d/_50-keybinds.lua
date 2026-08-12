@@ -9,16 +9,27 @@ local function shot(target)
     return string.format(fmt, target, shotDir)
 end
 
+-- Wrapped actions to prevent long lines rule trigger
+local toggle_max = function()
+    hl.dispatch(hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+end
+
+local toggle_full = function()
+    hl.dispatch(hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+end
+
+local toggle_float = function()
+    hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
+end
+
 -- Core layout table
 local bindings = {
-    -- Apps & session
+    -- Apps and session
     { combo = mod .. " + Return",  run = hl.dsp.exec_cmd(_G.cfg.terminal) },
     { combo = mod .. " + E",       run = hl.dsp.exec_cmd(_G.cfg.terminal .. " -e " .. _G.cfg.fileManager) },
     { combo = mod .. " + Q",       run = hl.dsp.window.close() },
     { combo = mod .. " + N",       run = hl.dsp.exec_cmd("swaync-client -t -sw") },
     { combo = mod .. " + SUPER_L", run = hl.dsp.exec_cmd("rofi -show drun"), opts = { release = true } },
-    
-    -- Lock screen wrapped to prevent long lines rule trigger
     { combo = mod .. " + L", run = hl.dsp.exec_cmd(
         "hyprlock --config ~/.config/hyprlock/Hyprlock-Styles/Style-1/hyprlock.conf"
     ) },
@@ -55,9 +66,9 @@ local bindings = {
     { combo = mod .. " + SHIFT + down",  run = hl.dsp.window.move({ direction = "d" }) },
 
     -- Window control modes
-    { combo = mod .. " + D",         run = function() hl.dispatch(hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" })) end },
-    { combo = mod .. " + F",         run = function() hl.dispatch(hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" })) end },
-    { combo = "SUPER + ALT + SPACE", run = function() hl.dispatch(hl.dsp.window.float({ action = "toggle" })) end },
+    { combo = mod .. " + D",         run = toggle_max },
+    { combo = mod .. " + F",         run = toggle_full },
+    { combo = "SUPER + ALT + SPACE", run = toggle_float },
     { combo = mod .. " + SEMICOLON", run = hl.dsp.window.resize({ x = -20, y = 0, relative = true }) },
     { combo = mod .. " + APOSTROPHE", run = hl.dsp.window.resize({ x = 20, y = 0, relative = true }) },
 
@@ -83,7 +94,7 @@ local bindings = {
 -- Execution loop & options parsing
 for _, b in ipairs(bindings) do
     local opts = b.opts or {}
-    
+
     if string.find(b.combo, "XF86") then
         opts.locked = true
         if string.find(b.combo, "Volume") or string.find(b.combo, "Brightness") then
