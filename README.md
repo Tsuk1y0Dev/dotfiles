@@ -1,7 +1,7 @@
 # Tsuk1y0Dev's Dotfiles
 
 <p align="center">
-  <img src="previews/preview1.png" width="49%" />
+  <img src="previews/preview1.png" width="98%" />
 </p>
 
 A minimalist, mouse-free Hyprland environment built with a Lua-based configuration ecosystem. 
