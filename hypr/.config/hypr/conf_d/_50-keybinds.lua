@@ -15,7 +15,7 @@ end
 hl.bind(mod .. " + Return", hl.dsp.exec_cmd(_G.cfg.terminal))
 hl.bind(mod .. " + E", hl.dsp.exec_cmd(_G.cfg.terminal .. " -e " .. _G.cfg.fileManager))
 hl.bind(mod .. " + Q", hl.dsp.window.close())
-hl.bind(mod .. " + L", hl.dsp.exec_cmd("hyprlock --config ~/.config/hypr/hyprlock/Hyprlock-Styles/Style-1/hyprlock.conf"))
+hl.bind(mod .. " + L", hl.dsp.exec_cmd("hyprlock --config ~/.config/hyprlock/Hyprlock-Styles/Style-1/hyprlock.conf"))
 hl.bind(mod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 hl.bind(mod .. " + SUPER_L", hl.dsp.exec_cmd("rofi -show drun"), { release = true })
 
