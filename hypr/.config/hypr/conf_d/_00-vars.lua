@@ -6,7 +6,7 @@ _G.cfg = {
     terminal = "kitty",
     fileManager = "yazi",
     screenshotDir = home .. "/Media/Screenshots",
-    
+
     is_author_system = true,
 
     autostart = {
@@ -15,7 +15,7 @@ _G.cfg = {
         { cmd = "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP" },
         { cmd = "awww-daemon" },
         { cmd = "swaync" },
-        
+
         -- Personal Software
         { cmd = "carla " .. home .. "/System/Configs/Carla/First.carxp", delay = 1, personal = true },
         { cmd = "v2rayN",  delay = 2, personal = true },
