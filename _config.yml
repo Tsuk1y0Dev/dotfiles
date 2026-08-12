@@ -2,3 +2,5 @@ theme: jekyll-theme-minimal
 title: Tsuk1y0Dev
 description: No-Bar. Pure Minimalism. Lua-driven Hyprland ecosystem.
 show_downloads: false
+
+logo: https://raw.githubusercontent.com/hyprwm/.github/main/profile/svg/logo.svg
