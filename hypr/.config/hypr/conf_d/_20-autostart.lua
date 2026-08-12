@@ -1,14 +1,26 @@
--- Autostart
+-- Autostart Execution Logic
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
-    hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
-    hl.exec_cmd("awww-daemon")
-    hl.exec_cmd("swaync")
+    if not (_G.cfg and _G.cfg.autostart) then return end
 
-    hl.exec_cmd("sleep 1 && carla /home/tsuk1y0/System/Configs/Carla/First.carxp")
-    hl.exec_cmd("sleep 2 && v2rayN")
-    hl.exec_cmd("sleep 3 && AyuGram")
-    hl.exec_cmd("sleep 3 && vesktop")
-    hl.exec_cmd("sleep 4 && spotify")
+    local is_author = _G.cfg.is_author_system or false
+
+    for _, app in ipairs(_G.cfg.autostart) do
+        local should_run = true
+        if app.personal and not is_author then
+            should_run = false
+        end
+
+        if should_run and app.cmd then
+            local final_cmd = app.cmd
+
+            if app.delay and app.delay > 0 then
+                final_cmd = string.format("sleep %d && %s &", app.delay, app.cmd)
+            else
+                final_cmd = app.cmd .. " &"
+            end
+
+            hl.exec_cmd(final_cmd)
+        end
+    end
 end)

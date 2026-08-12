@@ -1,63 +1,50 @@
 # Tsuk1y0Dev's Dotfiles
 
-Minimalist Hyprland environment managed with GNU Stow. Configuration is driven by the Lua-based Hyprland ecosystem.
+A minimalist, mouse-free Hyprland environment built with a Lua-based configuration ecosystem. 
 
+## 🧠 Workflow Philosophy
 
-## Structure
+* **No-Bar Setup:** Complete reliance on keyboard muscle memory, shortcuts, and notifications. Every pixel is dedicated to applications.
+* **Dynamic Priorities:** Workspaces function as a living stream. Lower indices represent current focus, higher indices represent lower priority.
+* **Themed Contexts:** Hidden layers (`special:tech`, `special:social`, `special:main`) separate background processes (Spotify, Carla, messaging) from active workspaces without screen real estate fragmentation.
+
+## 🗂 Structure
 
 ```text
 dotfiles/
-└── hypr/            # Hyprland package
+├── install.sh        # Automated deployment script
+└── hypr/            # Hyprland setup
     └── .config/
         └── hypr/
-            ├── hyprland.lua  # Main entry point
+            ├── hyprland.lua  # Main entry point (automated loading cycle)
             └── conf_d/       # Modular Lua configurations
 ```
 
-## System Dependencies
+## 🛠 Dependencies
 
-Ensure the following packages are installed on your system for the configurations and keybinds to function correctly:
+The installation script automatically manages the following dependencies:
 
-* `hyprland` (with Lua support)
-* `stow` (GNU Stow)
-* `git`
+* **Core:** `hyprland` (with Lua framework), `stow`, `git`
+* **Utilities:** `swaync`, `rofi`, `awww-daemon`, `grimblast` (AUR), `hyprlock`, `brightnessctl`, `wireplumber`, `playerctl`
 
-### Required Core Utilities
-* `swaync` (Notification daemon & client)
-* `rofi` (Application launcher)
-* `awww` (Wallpaper daemon)
-* `grimblast` (Screenshots)
-* `hyprlock` (Screen locker)
-* `brightnessctl` (Backlight control)
-* `wireplumber` (`wpctl` for audio management)
-* `playerctl` (Media keys control)
+## 🚀 Installation
 
-## Installation
+Clone the repository and run the automated installation script. Do not run it as root.
 
-1. Clone the repository into your preferred system directory:
-   ```bash
-   mkdir -p ~/System
-   git clone https://github.com ~/System/dotfiles
-   cd ~/System/dotfiles
-   ```
+```bash
+mkdir -p ~/System
+git clone https://github.com ~/System/dotfiles
+cd ~/System/dotfiles
+chmod +x install.sh
+./install.sh
+```
 
-2. Remove any existing configuration directory to avoid symlink conflicts:
-   ```bash
-   rm -rf ~/.config/hypr
-   ```
+## ⚙️ Customization
 
-3. Deploy the configuration using GNU Stow:
-   ```bash
-   stow --target=\$HOME hypr
-   ```
+System configuration is fully controlled via `hypr/.config/hypr/conf_d/_00-vars.lua`. 
 
-## ⚠️ Disclaimer & Customization
-
-This configuration is tailored for personal use. Before launching, review and modify the following files to match your system setup:
-
-* **Autostart (`hypr/.config/hypr/conf_d/_20-autostart.lua`)**: Contains user-specific applications (Carla paths, Spotify, chat clients). Update or comment them out.
-* **Keybinds (`hypr/.config/hypr/conf_d/_50-keybinds.lua`)**: Verify your preferred terminal, file manager, and check the target path for `hyprlock --config` (default points to `~/.config/hyprlock/Hyprlock-Styles/...`).
+If the installation script detects a non-author system, it automatically flips the `is_author_system` flag to `false`. This prevents personal background services (Carla profiles, Spotify, specialized messengers) from executing during startup on external machines.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.

@@ -22,7 +22,7 @@ hl.bind(mod .. " + SUPER_L", hl.dsp.exec_cmd("rofi -show drun"), { release = tru
 -- Screenshots
 hl.bind(mod .. " + SHIFT + S", hl.dsp.exec_cmd(shot("active")))
 hl.bind("PRINT", hl.dsp.exec_cmd(shot("area")))
-hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd(shot("area")))
+hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd(shot("screen")))
 
 -- Brightness / volume
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl s 5%+"), { locked = true, repeating = true })
