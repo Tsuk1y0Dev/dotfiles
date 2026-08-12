@@ -1,6 +1,4 @@
-theme: jekyll-theme-cayman
-title: Tsuk1y0Dev's Hyprland
-description: A minimalist, mouse-free, and bar-less configuration ecosystem driven by Lua.
-show_downloads: true
-google_analytics:
-
+remote_theme: yaoyao-liu/minimal-light
+title: Tsuk1y0Dev
+description: No-Bar. Pure Minimalism. Lua-driven Hyprland ecosystem.
+show_downloads: false
