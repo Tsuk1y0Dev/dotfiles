@@ -76,58 +76,49 @@ fi
 
 
 temp:
-
-#include <Wire.h>
 #include <TroykaIMU.h>
 
-// Создаем объект для фильтра Маджвика (Madgwick), который считает углы
+// Создаем фильтр для расчета углов
 Madgwick filter;
 
-// Создаем объекты для акселерометра и гироскопа
+// Создаем объекты акселерометра и гироскопа
 Accelerometer accel;
 Gyroscope gyro;
 
-// Переменная для контроля времени
-unsigned long checkTimer = 0;
+unsigned long timer = 0;
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("IMU Initialization...");
 
-  // Запускаем датчики
+  // Запускаем датчики. Библиотека сама внутри включит I2C (Wire)
   accel.begin();
   gyro.begin();
   
-  // Устанавливаем частоту обновления фильтра (в Герцах)
+  // Запускаем фильтр на частоту 100 Герц
   filter.begin(100); 
 }
 
 void loop() {
-  // Считываем показания в реальном времени
+  // Очень быстро считываем сырые данные
   accel.readGXYZ();
   gyro.readRadXYZ();
 
-  // Передаем данные в фильтр. 
-  // ВАЖНО: гироскоп должен отдавать данные в радианах в секунду (readRadXYZ)
+  // Обновляем математический фильтр
   filter.update(gyro.getGyroX_rads(), gyro.getGyroY_rads(), gyro.getGyroZ_rads(), 
                 accel.getAccelX_g(), accel.getAccelY_g(), accel.getAccelZ_g());
 
-  // Выводим результат в монитор порта каждые 100 миллисекунд
-  if (millis() - checkTimer >= 100) {
-    checkTimer = millis();
+  // Выводим градусы в монитор порта каждые 100 миллисекунд
+  if (millis() - timer >= 100) {
+    timer = millis();
 
-    // Получаем готовые углы в градусах
-    float roll  = filter.getRollDeg();   // Крен (наклон влево/вправо)
-    float pitch = filter.getPitchDeg();  // Тангаж (наклон вперед/назад)
-    float yaw   = filter.getYawDeg();    // Рыскание (поворот по компасу)
+    // Переводим данные в понятные углы (градусы)
+    float roll  = filter.getRollDeg();   // Наклон влево / вправо
+    float pitch = filter.getPitchDeg();  // Наклон вперед / назад
 
-    // Печатаем данные
-    Serial.print("Roll: ");
+    Serial.print("Наклон влево/вправо: ");
     Serial.print(roll);
-    Serial.print(" °\tPitch: ");
+    Serial.print(" °\tНаклон вперед/назад: ");
     Serial.print(pitch);
-    Serial.print(" °\tYaw: ");
-    Serial.print(yaw);
     Serial.println(" °");
   }
 }
