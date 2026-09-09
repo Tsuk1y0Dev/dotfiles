@@ -72,3 +72,62 @@ if [ -n "${HYPRLAND_INSTANCE_SIGNATURE:-}" ]; then
         hyprctl reload
     fi
 fi
+
+
+
+temp:
+
+#include <Wire.h>
+#include <TroykaIMU.h>
+
+// Создаем объект для фильтра Маджвика (Madgwick), который считает углы
+Madgwick filter;
+
+// Создаем объекты для акселерометра и гироскопа
+Accelerometer accel;
+Gyroscope gyro;
+
+// Переменная для контроля времени
+unsigned long checkTimer = 0;
+
+void setup() {
+  Serial.begin(9600);
+  Serial.println("IMU Initialization...");
+
+  // Запускаем датчики
+  accel.begin();
+  gyro.begin();
+  
+  // Устанавливаем частоту обновления фильтра (в Герцах)
+  filter.begin(100); 
+}
+
+void loop() {
+  // Считываем показания в реальном времени
+  accel.readGXYZ();
+  gyro.readRadXYZ();
+
+  // Передаем данные в фильтр. 
+  // ВАЖНО: гироскоп должен отдавать данные в радианах в секунду (readRadXYZ)
+  filter.update(gyro.getGyroX_rads(), gyro.getGyroY_rads(), gyro.getGyroZ_rads(), 
+                accel.getAccelX_g(), accel.getAccelY_g(), accel.getAccelZ_g());
+
+  // Выводим результат в монитор порта каждые 100 миллисекунд
+  if (millis() - checkTimer >= 100) {
+    checkTimer = millis();
+
+    // Получаем готовые углы в градусах
+    float roll  = filter.getRollDeg();   // Крен (наклон влево/вправо)
+    float pitch = filter.getPitchDeg();  // Тангаж (наклон вперед/назад)
+    float yaw   = filter.getYawDeg();    // Рыскание (поворот по компасу)
+
+    // Печатаем данные
+    Serial.print("Roll: ");
+    Serial.print(roll);
+    Serial.print(" °\tPitch: ");
+    Serial.print(pitch);
+    Serial.print(" °\tYaw: ");
+    Serial.print(yaw);
+    Serial.println(" °");
+  }
+}

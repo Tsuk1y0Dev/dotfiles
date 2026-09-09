@@ -21,6 +21,6 @@ _G.cfg = {
         { cmd = "v2rayN",  delay = 2, personal = true },
         { cmd = "AyuGram", delay = 3, personal = true },
         { cmd = "vesktop", delay = 3, personal = true },
-        { cmd = "spotify", delay = 4, personal = true },
+	{ cmd = "feishin", delay = 4, personal = true },
     }
 }

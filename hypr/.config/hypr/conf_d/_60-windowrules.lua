@@ -55,6 +55,7 @@ hl.window_rule({
 })
 
 -- Special workspace assignment
+hl.window_rule({ match = { class = "^(feishin)$" }, workspace = "special:tech silent" })
 hl.window_rule({ match = { class = "^(Spotify)$" }, workspace = "special:tech silent" })
 hl.window_rule({ match = { class = "^([Vv]esktop)$" }, workspace = "special:social silent" })
 hl.window_rule({ match = { class = "^(carla)$" }, workspace = "special:tech silent" })
